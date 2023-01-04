@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ClasesGenerales;
 
 namespace EstDatos
 {
-    class CLector
+    class CLector : CObjeto
     {
         public string idLector;
         public string apellidos;
@@ -21,6 +22,19 @@ namespace EstDatos
             direccion = Pdireccion;
             sexo = Psexo;
             edad = Pedad;
+        }
+        public override void Leer()
+        {
+            base.Leer();
+        }
+        public override void Mostrar()
+        {
+            base.Mostrar();
+        }
+
+        public override void Escribir()
+        {
+            base.Escribir();
         }
     }
 }

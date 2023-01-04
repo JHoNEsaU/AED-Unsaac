@@ -22,6 +22,19 @@ namespace AppBiblioteca
             aFechaDevolucion = pFechaDevolucion;
             aIdPrestamo = pIdPrestamo;
         }
-        
+        public override void Leer()
+        {
+            base.Leer();
+        }
+        public override void Mostrar()
+        {
+            base.Mostrar();
+        }
+
+        public override void Escribir()
+        {
+            base.Escribir();
+        }
+
     }
 }

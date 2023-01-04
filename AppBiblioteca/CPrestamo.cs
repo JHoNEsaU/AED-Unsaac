@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LibTADS;
 using ClasesGenerales;
 namespace AppBiblioteca
 {
@@ -24,6 +23,19 @@ namespace AppBiblioteca
             aFechaDevolucion = pFechaDevolucion;
             aIdLector = pIdLector;
             aIdLibro = pIdLibro;
+        }
+        public override void Leer()
+        {
+            base.Leer();
+        }
+        public override void Mostrar()
+        {
+            base.Mostrar();
+        }
+
+        public override void Escribir()
+        {
+            base.Escribir();
         }
     }
 }

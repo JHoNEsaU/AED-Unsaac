@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ClasesGenerales;
 
 namespace EstDatos
 {
-    class CTesis
+    class CTesis : CObjeto
     {
         public string idTesis;
         public string titulo;
@@ -23,6 +24,19 @@ namespace EstDatos
             asesor = Pasesor;
         }
 
+        public override void Leer()
+        {
+            base.Leer();
+        }
+        public override void Mostrar()
+        {
+            base.Mostrar();
+        }
+
+        public override void Escribir()
+        {
+            base.Escribir();
+        }
 
     }
 }

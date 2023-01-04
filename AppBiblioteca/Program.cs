@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace AppBiblioteca
 {
-    internal class CControl
+    class Program
     {
+        static void Main(string[] args)
+        {
 
+        }
     }
 }

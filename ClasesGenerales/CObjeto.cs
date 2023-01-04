@@ -46,6 +46,11 @@ namespace ClasesGenerales
             return (Objeto.ToString() == ToString());
         }
 
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
         // ================================================================
         public virtual void Leer()
         {
