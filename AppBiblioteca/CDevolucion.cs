@@ -4,21 +4,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace AppBiblioteca
 {
     public class CDevolucion : CObjeto
     {
-        private string IdDevolucion;
-        private string FechaDevolucion;
-        private string IdPrestamo;
+        private string aIdDevolucion;
+        private string aFechaDevolucion;
+        private string aIdPrestamo;
         protected internal static CListaObjetos Devoluciones = new CListaObjetos();
 
-        public CDevolucion(string pIdDevolucion, string pFechaDevolucion, string pIdPrestamo)
+        public CDevolucion(string pIdDevolucion, string pFechaDevolucion, string pIdPrestamo):base(pIdDevolucion)
         {
-            IdDevolucion = pIdDevolucion;
-            FechaDevolucion = pFechaDevolucion;
-            IdPrestamo = pIdPrestamo;
+            
+            aIdDevolucion = pIdDevolucion;
+            aFechaDevolucion = pFechaDevolucion;
+            aIdPrestamo = pIdPrestamo;
         }
         
     }
