@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using ClasesGenerales;
 
-namespace EstDatos
+namespace AppBiblioteca
 {
     class CTesis : CObjeto
     {
@@ -24,9 +24,54 @@ namespace EstDatos
             asesor = Pasesor;
         }
 
+        #region ====================================================== PROPIEDADES ======================================================
+        public string IdTesis
+        {
+            get { return Id; }
+            set { Id = value; }
+        }
+        public string Titulo
+        { 
+            get {return titulo; }
+            set { titulo= value; }
+        }
+        public string Autor
+        {
+            get { return autor; }
+            set { autor = value; }
+        }
+        public string Anio
+        {
+            get { return anio; }
+            set { anio = value; }
+        }
+        public string Area
+        {
+            get { return area; }
+            set { area = value; }
+        }
+        public string Asesor
+        {
+            get { return asesor; }
+            set { asesor = value; }
+        }
+        #endregion
+
         public override void Leer()
         {
-            base.Leer();
+            Console.WriteLine(" ============ INTRODUCIR DATOS DE TESIS ============");
+            Console.WriteLine("Introducir ID de Tesis: ");
+            Id = Console.ReadLine();
+            Console.WriteLine("Introducir titulo: ");
+            Titulo = Console.ReadLine();
+            Console.WriteLine("Introducir autor: ");
+            Autor = Console.ReadLine();
+            Console.WriteLine("Introducir anio: ");
+            Anio = Console.ReadLine();
+            Console.WriteLine("Introducir area: ");
+            Area = Console.ReadLine();
+            Console.WriteLine("Introducir asesor: ");
+            Asesor = Console.ReadLine();
         }
         public override void Mostrar()
         {
@@ -35,7 +80,15 @@ namespace EstDatos
 
         public override void Escribir()
         {
-            base.Escribir();
+            Console.WriteLine();
+            Console.WriteLine("           DATOS DE TESIS");
+            Console.WriteLine("======================================");
+            Console.WriteLine("Identificador tesis : " + Id);
+            Console.WriteLine("Titulo              : " + titulo);
+            Console.WriteLine("Autor               : " + autor);
+            Console.WriteLine("Anio                : " + anio);
+            Console.WriteLine("Asesor              : " + asesor);
+            Console.WriteLine("======================================");
         }
 
     }

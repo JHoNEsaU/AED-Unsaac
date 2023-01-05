@@ -5,4 +5,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EstDatos\EstDatos.csproj" />
+    <ProjectReference Include="..\LibTADS\LibTADS.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -22,9 +22,33 @@ namespace AppBiblioteca
             aFechaDevolucion = pFechaDevolucion;
             aIdPrestamo = pIdPrestamo;
         }
+        #region ====================================================== PROPIEDADES ======================================================
+        public string IdDevolucion
+        {
+            get { return Id; }
+            set { Id = value; }
+        }
+        public string FechaDevolucion
+        {
+            get { return aFechaDevolucion; }
+            set { aFechaDevolucion = value; }
+        }
+        public string IdPrestamo
+        {
+            get { return aIdPrestamo; }
+            set { aIdPrestamo = value; }
+        }
+        #endregion
         public override void Leer()
         {
-            base.Leer();
+            Console.WriteLine(" ============ INTRODUCIR DATOS DE DEVOLUCION ============");
+            Console.WriteLine("Introducir ID de devolucion: ");
+            Id = Console.ReadLine();
+            Console.WriteLine("Introducir fecha de devolucion: ");
+            FechaDevolucion = Console.ReadLine();
+            Console.WriteLine("Introducir ID prestamo: ");
+            IdPrestamo = Console.ReadLine();
+           
         }
         public override void Mostrar()
         {
@@ -33,7 +57,13 @@ namespace AppBiblioteca
 
         public override void Escribir()
         {
-            base.Escribir();
+            Console.WriteLine();
+            Console.WriteLine("         DATOS DE DEVOLUCION");
+            Console.WriteLine("======================================");
+            Console.WriteLine("Identificador devolucion : " + Id);
+            Console.WriteLine("Fecha de devolucion      : " + aFechaDevolucion);
+            Console.WriteLine("Identificador prestamo   : " + aIdPrestamo);
+            Console.WriteLine("======================================");
         }
 
     }

@@ -1,4 +1,7 @@
 ﻿using System;
+//using AppBiblioteca;
+//using LibTADS;
+//using ClasesGenerales;
 
 namespace AED_Unsaac
 {
@@ -6,11 +9,7 @@ namespace AED_Unsaac
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("Hola mUndo");
-            Console.WriteLine(2);
-            Console.WriteLine("CAmbois");
-            Console.WriteLine("sea");
+            
         }
     }
 }

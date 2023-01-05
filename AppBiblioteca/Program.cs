@@ -10,6 +10,8 @@ namespace AppBiblioteca
     {
         static void Main(string[] args)
         {
+            CLector a = new CLector("jhon", "jho32fwefn", "jhoqwdqwdn", "jhongdfgdfg", "jhonasdddsa", "jhonasd");
+            a.Mostrar();
 
         }
     }
