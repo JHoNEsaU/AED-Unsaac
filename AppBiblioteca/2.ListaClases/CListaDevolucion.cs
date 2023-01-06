@@ -23,14 +23,14 @@ namespace AppBiblioteca
         public void AgregarDevolucion()
         {
             // ----- Crear objeto Libro y leer sus datos 
-            CLector lector = new CLector();
-            lector.Leer();
+            CDevolucion devolucion = new CDevolucion();
+            devolucion.Leer();
             // ----- Agregar objeto a la Lista de Libros
-            Agregar(lector);
+            Agregar(devolucion);
         }
 
         // ==============================================================
-        public void ConsultarDevolucion()
+        public void BuscarDevolucion()
         {
             // ----- Leer el identificador de libro que se desea buscar
             Console.WriteLine();
@@ -40,7 +40,7 @@ namespace AppBiblioteca
             int I = Indice(Id);
             if (I >= 0)
             {
-                CLector OLibro = (Listado.Iesimo(I) as CLector);
+                CDevolucion OLibro = (Listado.Iesimo(I) as CDevolucion);
                 OLibro.Mostrar();
             }
             else
@@ -66,14 +66,14 @@ namespace AppBiblioteca
         // ======================================================
         public void SeleccionarLibros()
         {
-            //// ----- Poner Titulo
-            //Console.WriteLine();
-            //Console.WriteLine("========================================================================");
-            //Console.WriteLine("                          RELACION DE LIBROS");
-            //Console.WriteLine("========================================================================");
-            //Console.WriteLine("Id".PadRight(10) + "Titulo".PadRight(30) + "Autor".PadRight(20) + "Año".PadLeft(5) + " Especialidad".PadRight(15));
-            //Console.WriteLine("------------------------------------------------------------------------");
-            //RecorrerListado();
+            // ----- Poner Titulo
+            Console.WriteLine();
+            Console.WriteLine("========================================================================");
+            Console.WriteLine("                          RELACION DE LIBROS");
+            Console.WriteLine("========================================================================");
+            Console.WriteLine("Id".PadRight(10) + "Titulo".PadRight(30) + "Autor".PadRight(20) + "Año".PadLeft(5) + " Especialidad".PadRight(15));
+            Console.WriteLine("------------------------------------------------------------------------");
+            RecorrerListado();
         }
         // ======================================================
         public void ListarDevoluciones()

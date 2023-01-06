@@ -1,30 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using ClasesGenerales;
 
 namespace AppBiblioteca
 {
-    internal class CControlLector
+    internal class CControlDevolucion
     {
         #region *********************** ATRIBUTOS ************************
-        private CListaLector aListaLector;
+        private CListaDevolucion aListaDevolucion;
         #endregion *********************** ATRIBUTOS ************************
 
         #region *********************** METODOS ************************
 
         #region ==================== CONSTRUCTORES =======================
-        public CControlLector()
+        public CControlDevolucion()
         {
-            aListaLector = new CListaLector();
+            aListaDevolucion = new CListaDevolucion();
         }
         #endregion ==================== CONSTRUCTORES =======================
 
         #region ==================== PROPIEDADES =======================
-        public CListaLector ListaLector
+        public CListaDevolucion ListaLector
         {
-            get { return aListaLector; }
-            set { aListaLector = value; }
+            get { return aListaDevolucion; }
+            set { aListaDevolucion = value; }
         }
         #endregion ==================== PROPIEDADES =======================
 
@@ -38,10 +37,10 @@ namespace AppBiblioteca
             Console.WriteLine("**************************************");
             Console.WriteLine("*       CONTROL DE LECTOR            *");
             Console.WriteLine("**************************************");
-            Console.WriteLine("1.- Agergar Lector");
-            Console.WriteLine("2.- Eliminar Lector");
-            Console.WriteLine("3.- Listar Lectores");
-            Console.WriteLine("4.- Buscar Lector");
+            Console.WriteLine("1.- Agregar Devolucion");
+            Console.WriteLine("2.- Eliminar Devolucion");
+            Console.WriteLine("3.- Listar Devoluciones");
+            Console.WriteLine("4.- Buscar Devolucion");
             Console.WriteLine("5.- Salir");
         }
 
@@ -60,18 +59,18 @@ namespace AppBiblioteca
                 switch (Opcion)
                 {
                     case 1:
-                        ListaLector.AgregarLector();
+                        ListaLector.AgregarDevolucion();
                         break;
                     case 2:
-                        ListaLector.EliminarLector();
+                        ListaLector.EliminarDevolucion();
                         break;
                     case 3:
-                        ListaLector.ListarLector();
+                        ListaLector.ListarDevoluciones();
                         break;
                     case 4:
-                        ListaLector.BuscarLector();
+                        ListaLector.BuscarDevolucion();
                         break;
-                    
+
                 } // -- fin de switch 
             } while (Opcion < 5);
         }

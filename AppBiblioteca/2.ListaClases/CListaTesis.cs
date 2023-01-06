@@ -22,14 +22,14 @@ namespace AppBiblioteca
         public void AgregarTesis()
         {
             // ----- Crear objeto Libro y leer sus datos 
-            CLector tesis = new CLector();
+            CTesis tesis = new CTesis();
             tesis.Leer();
             // ----- Agregar objeto a la Lista de Libros
             Agregar(tesis);
         }
 
         // ==============================================================
-        public void ConsultarLibro()
+        public void BuscarTesis()
         {
             // ----- Leer el identificador de libro que se desea buscar
             Console.WriteLine();
@@ -39,7 +39,7 @@ namespace AppBiblioteca
             int I = Indice(Id);
             if (I >= 0)
             {
-                CLector OLibro = (Listado.Iesimo(I) as CLector);
+                CTesis OLibro = (Listado.Iesimo(I) as CTesis);
                 OLibro.Mostrar();
             }
             else
@@ -64,16 +64,17 @@ namespace AppBiblioteca
                 Console.WriteLine(Id + " No existe en la lista...");
         }
         // ======================================================
-        public void SeleccionarLibros()
+        public void ListadoTesis()
         {
-            //// ----- Poner Titulo
-            //Console.WriteLine();
-            //Console.WriteLine("========================================================================");
-            //Console.WriteLine("                          RELACION DE LIBROS");
-            //Console.WriteLine("========================================================================");
-            //Console.WriteLine("Id".PadRight(10) + "Titulo".PadRight(30) + "Autor".PadRight(20) + "Año".PadLeft(5) + " Especialidad".PadRight(15));
-            //Console.WriteLine("------------------------------------------------------------------------");
-            //RecorrerListado();
+            // ----- Poner Titulo
+            Console.WriteLine();
+            Console.WriteLine("========================================================================");
+            Console.WriteLine("                          RELACION DE LIBROS");
+            Console.WriteLine("========================================================================");
+            Console.WriteLine("Id".PadRight(10) + "Titulo".PadRight(30) + "Autor".PadRight(20) + "Año".PadLeft(5) + " Especialidad".PadRight(15));
+            Console.WriteLine("------------------------------------------------------------------------");
+            RecorrerListado();
+            
         }
         // ======================================================
         public void ListarTesis()
@@ -81,7 +82,12 @@ namespace AppBiblioteca
             // ----- Asignar null al delegado 
             deProcesarObjeto = null;
             // ----- Mostrar la lista de libros 
-            SeleccionarLibros();
+            ListadoTesis();
+        }
+        public void mostrar()
+        {
+
+            ListarTesis();
         }
 
         // ======================================================
@@ -101,47 +107,6 @@ namespace AppBiblioteca
             //// ----- Mostrar la lista de libros de este autor
             //SeleccionarLibros();
         }
-
-        // ======================================================
-        public void SeleccionarLibrosEspecialidad()
-        {
-            //// ----- Leer el especialidad
-            //Console.WriteLine("");
-            //Console.Write("Ingrese la Especialidad: ");
-            //string Especialidad = Console.ReadLine();
-
-            //// ----- Asignar método al delegado 
-            //deProcesarObjeto = delegate (Object O) {
-            //    CLibro OLibro = O as CLibro;
-            //    if (OLibro.Especialidad.Equals(Especialidad))
-            //        OLibro.Escribir();
-            //};
-            //// ----- Mostrar la lista de libros de esta especialidad
-            //SeleccionarLibros();
-        }
-
-        // ======================================================
-        public void SeleccionarLibrosAnio()
-        {
-            //// ----- Leer el Año
-            //Console.WriteLine("");
-            //Console.Write("Ingrese el Año: ");
-            //int Anio = int.Parse(Console.ReadLine());
-
-            //// ----- Mostrar la lista de libros de este año
-
-            //// ----- Asignar método al delegado 
-            //deProcesarObjeto = delegate (Object O) {
-            //    CLibro OLibro = O as CLibro;
-            //    if (OLibro.Anio == Anio)
-            //        OLibro.Escribir();
-            //};
-            //// ----- Mostrar la lista de libros de esta especialidad
-            //SeleccionarLibros();
-        }
-
-
-
 
         #endregion ===================    OTROS     =======================
 

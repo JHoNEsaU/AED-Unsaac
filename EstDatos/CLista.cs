@@ -84,7 +84,7 @@ namespace EstDatos
             if (EstaVacia())
                 return 0;
             else // comparar con el elemento actual
-            if (aElemento.Equals(pElemento))
+            if (Elemento.Equals(pElemento))
                 return 1;
             else
             { // buscar en el resto de la lista

@@ -8,7 +8,6 @@ namespace AppBiblioteca
 {
     public class CPrestamo : CObjeto
     {
-        private string aIdPrestamo;
         private string aFechaPrestamo;
         private string aFechaDevolucion;
         private string aIdLector;
@@ -23,7 +22,7 @@ namespace AppBiblioteca
         public CPrestamo(string pIdPrestamo, string pFechaPrestamo, string pFechaDevolucion, 
             string pIdLector, string pIdLibro):base(pIdPrestamo)
         {
-            aIdPrestamo = pIdPrestamo;
+       
             aFechaPrestamo = pFechaPrestamo;
             aFechaDevolucion = pFechaDevolucion;
             aIdLector = pIdLector;
@@ -32,8 +31,8 @@ namespace AppBiblioteca
         #region ====================================================== PROPIEDADES ======================================================
         public string IdPrestamo
         {
-            get { return aIdPrestamo; }
-            set { aIdPrestamo = value; }
+            get { return Id; }
+            set { Id = value; }
         }
         public string FechaPrestamo
         {

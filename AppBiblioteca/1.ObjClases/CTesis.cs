@@ -7,7 +7,6 @@ namespace AppBiblioteca
 {
     class CTesis : CObjeto
     {
-        public string idTesis;
         public string titulo;
         public string autor;
         public string anio;
@@ -18,9 +17,9 @@ namespace AppBiblioteca
         {
 
         }
-        public CTesis(string PidTesis, string Ptitulo, string Pautor, string Panio,string Parea, string Pasesor)
+        public CTesis(string PidTesis, string Ptitulo, string Pautor, string Panio,string Parea, string Pasesor): base(PidTesis)
         {
-            idTesis = PidTesis;
+
             titulo = Ptitulo;
             autor = Pautor;
             anio = Panio;
@@ -79,7 +78,9 @@ namespace AppBiblioteca
         }
         public override void Mostrar()
         {
-            base.Mostrar();
+            Console.WriteLine();
+            Console.WriteLine(Id);
+            Console.WriteLine();
         }
 
         public override void Escribir()

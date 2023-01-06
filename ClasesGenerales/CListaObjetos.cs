@@ -43,7 +43,7 @@ namespace ClasesGenerales
         public virtual void Agregar(CObjeto Objeto)
         {
             // ----- Verificar que objeto no exista en la lista
-            if (Indice(Objeto) < 0)
+            if (Indice(Objeto) < 1)
                 Listado.Agregar(Objeto);
             else
                 // ----- Objeto ya existe en el listado, por tanto poner mensaje de error 
@@ -74,8 +74,9 @@ namespace ClasesGenerales
         // ==============================================================
         public virtual void ProcesarObjeto(Object O)
         {
-            CObjeto Objeto = O as CObjeto;
+            CObjeto Objeto = (O as CObjeto);
             Objeto.Escribir();
+
         }
 
         // ==============================================================
@@ -96,12 +97,15 @@ namespace ClasesGenerales
         public void RecorrerListado()
         {
             // ----- Recorrer listado para procesar cada objeto de la lista
-            for (int K = 0; K < Listado.Longitud(); K++)
+            for (int K = 1; K < Listado.Longitud()+1; K++)
+            {
                 // ----- Procesar K-ésimo Objeto
                 if (deProcesarObjeto != null)
                     deProcesarObjeto(Listado.Ubicacion(K));
                 else
                     ProcesarObjeto(Listado.Ubicacion(K));
+            }
+                
         }
 
         #endregion ===================    OTROS     =======================
