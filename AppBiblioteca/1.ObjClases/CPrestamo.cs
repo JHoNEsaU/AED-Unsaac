@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ClasesGenerales;
-namespace AppBiblioteca
+namespace AppBiblioteca.ClasesObjLista
 {
     public class CPrestamo : CObjeto
     {
@@ -15,8 +15,8 @@ namespace AppBiblioteca
         private string aIdLibro;
         protected internal static CListaObjetos LibPrestamos = new CListaObjetos();
 
-        public CPrestamo(string pIdPrestamo, string pFechaPrestamo, string pFechaDevolucion, 
-            string pIdLector, string pIdLibro):base(pIdPrestamo)
+        public CPrestamo(string pIdPrestamo, string pFechaPrestamo, string pFechaDevolucion,
+            string pIdLector, string pIdLibro) : base(pIdPrestamo)
         {
             aIdPrestamo = pIdPrestamo;
             aFechaPrestamo = pFechaPrestamo;

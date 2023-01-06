@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using ClasesGenerales;
 
-namespace EstDatos
+namespace AppBiblioteca.ClasesObjLista
 {
     class CLector : CObjeto
     {

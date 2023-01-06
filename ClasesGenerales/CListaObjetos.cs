@@ -10,7 +10,7 @@ namespace ClasesGenerales
 {
     public delegate void DelegadoProcesarObjeto(object O);
     public delegate bool DelegadoSeleccionarObjeto(object O);
-    public class CListaObjetos : CLista
+    public class CListaObjetos
     {
         #region *********************** ATRIBUTOS ************************
         private CLista aListado;
@@ -40,7 +40,7 @@ namespace ClasesGenerales
 
         #region ====================   OTROS     =======================
         // ==============================================================
-        public void Agregar(CObjeto Objeto)
+        public virtual void Agregar(CObjeto Objeto)
         {
             // ----- Verificar que objeto no exista en la lista
             if (Indice(Objeto) < 0)
@@ -57,7 +57,7 @@ namespace ClasesGenerales
         }
 
         // ==============================================================
-        public void Consultar(object pId)
+        public virtual void Consultar(object pId)
         {
             // ----- Determinar Indice o ubicacion del Identificador
             int I = Indice(pId);
@@ -79,15 +79,15 @@ namespace ClasesGenerales
         }
 
         // ==============================================================
-        public ArrayList GenerarSubLista()
+        public CListaObjetos GenerarSubLista()
         {
             // ----- Generar lista vacia
-            ArrayList Aux = new ArrayList();
+            CListaObjetos Aux = new CListaObjetos();
             // ----- Recorrer la lista y seleccionar objetos para la sublista
             for (int K = 0; K < Listado.Longitud(); K++)
                 // ----- Procesar K-ésimo Objeto
                 if ((deSeleccionarObjeto == null) || (deSeleccionarObjeto(Listado.Ubicacion(K))))
-                    Aux.Add(Listado.Ubicacion(K));
+                    Aux.Agregar((CObjeto)Listado.Iesimo(K));
             // ----- Retornar sub lista
             return Aux;
         }
@@ -105,7 +105,19 @@ namespace ClasesGenerales
         }
 
         #endregion ===================    OTROS     =======================
-
+        public virtual void Eliminar(object pId)
+        {
+            // ----- Determinar Indice o ubicacion del Identificador
+            int I = Indice(pId);
+            if (I >= 0)
+            {
+                CObjeto Objeto = (Listado.Iesimo(I) as CObjeto);
+                Listado.Eliminar(I);
+            }
+            else
+                // ----- Objeto no existe en el listado, por tanto poner mensaje de error 
+                Console.WriteLine(pId + " No existe en la lista...");
+        }
         #endregion *********************** METODOS ************************
 
     }

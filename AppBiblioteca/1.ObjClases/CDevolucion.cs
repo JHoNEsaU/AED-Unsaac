@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
 
-namespace AppBiblioteca
+namespace AppBiblioteca.ClasesObjLista
 {
     public class CDevolucion : CObjeto
     {
@@ -15,9 +15,9 @@ namespace AppBiblioteca
         private string aIdPrestamo;
         protected internal static CListaObjetos Devoluciones = new CListaObjetos();
 
-        public CDevolucion(string pIdDevolucion, string pFechaDevolucion, string pIdPrestamo):base(pIdDevolucion)
+        public CDevolucion(string pIdDevolucion, string pFechaDevolucion, string pIdPrestamo) : base(pIdDevolucion)
         {
-            
+
             aIdDevolucion = pIdDevolucion;
             aFechaDevolucion = pFechaDevolucion;
             aIdPrestamo = pIdPrestamo;

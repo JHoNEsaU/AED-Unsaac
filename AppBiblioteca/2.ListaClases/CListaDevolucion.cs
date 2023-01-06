@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using ClasesGenerales;
 namespace EstDatos.ClasesLista
 {
-    internal class CListaDevolucion : CListaObjetos
+    public class CListaDevolucion : CListaObjetos
     {
+        
     }
 }

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EstDatos.ClasesLista
+namespace AppBiblioteca.ControlClases
 {
-    internal class CListaPrestamo
+    internal class CControl
     {
+
     }
 }

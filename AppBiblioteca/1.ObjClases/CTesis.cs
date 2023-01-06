@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using ClasesGenerales;
 
-namespace EstDatos
+namespace AppBiblioteca.ClasesObjLista
 {
     class CTesis : CObjeto
     {
@@ -14,7 +14,7 @@ namespace EstDatos
         public string area;
         public string asesor;
 
-        public CTesis(string PidTesis, string Ptitulo, string Pautor, string Panio,string Parea, string Pasesor)
+        public CTesis(string PidTesis, string Ptitulo, string Pautor, string Panio, string Parea, string Pasesor)
         {
             idTesis = PidTesis;
             titulo = Ptitulo;
