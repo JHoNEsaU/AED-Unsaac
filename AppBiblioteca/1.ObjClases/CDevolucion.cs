@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
 
-namespace AppBiblioteca.ClasesObjLista
+namespace AppBiblioteca
 {
     public class CDevolucion : CObjeto
     {
@@ -15,16 +15,40 @@ namespace AppBiblioteca.ClasesObjLista
         private string aIdPrestamo;
         protected internal static CListaObjetos Devoluciones = new CListaObjetos();
 
-        public CDevolucion(string pIdDevolucion, string pFechaDevolucion, string pIdPrestamo) : base(pIdDevolucion)
+        public CDevolucion(string pIdDevolucion, string pFechaDevolucion, string pIdPrestamo):base(pIdDevolucion)
         {
-
+            
             aIdDevolucion = pIdDevolucion;
             aFechaDevolucion = pFechaDevolucion;
             aIdPrestamo = pIdPrestamo;
         }
+        #region ====================================================== PROPIEDADES ======================================================
+        public string IdDevolucion
+        {
+            get { return Id; }
+            set { Id = value; }
+        }
+        public string FechaDevolucion
+        {
+            get { return aFechaDevolucion; }
+            set { aFechaDevolucion = value; }
+        }
+        public string IdPrestamo
+        {
+            get { return aIdPrestamo; }
+            set { aIdPrestamo = value; }
+        }
+        #endregion
         public override void Leer()
         {
-            base.Leer();
+            Console.WriteLine(" ============ INTRODUCIR DATOS DE DEVOLUCION ============");
+            Console.WriteLine("Introducir ID de devolucion: ");
+            Id = Console.ReadLine();
+            Console.WriteLine("Introducir fecha de devolucion: ");
+            FechaDevolucion = Console.ReadLine();
+            Console.WriteLine("Introducir ID prestamo: ");
+            IdPrestamo = Console.ReadLine();
+           
         }
         public override void Mostrar()
         {
@@ -33,7 +57,13 @@ namespace AppBiblioteca.ClasesObjLista
 
         public override void Escribir()
         {
-            base.Escribir();
+            Console.WriteLine();
+            Console.WriteLine("         DATOS DE DEVOLUCION");
+            Console.WriteLine("======================================");
+            Console.WriteLine("Identificador devolucion : " + Id);
+            Console.WriteLine("Fecha de devolucion      : " + aFechaDevolucion);
+            Console.WriteLine("Identificador prestamo   : " + aIdPrestamo);
+            Console.WriteLine("======================================");
         }
 
     }
