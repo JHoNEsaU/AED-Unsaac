@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ClasesGenerales;
 
-namespace AppBiblioteca._2.ListaClases
+namespace AppBiblioteca
 {
-    internal class CListaTesis
+    internal class CListaTesis : CListaObjetos
     {
     }
 }

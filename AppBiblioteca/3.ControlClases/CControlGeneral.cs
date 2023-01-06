@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using ClasesGenerales;
 
-namespace AppBiblioteca._3.ControlClases
+namespace AppBiblioteca
 {
     internal class CControlGeneral
     {
+        
     }
 }

@@ -13,7 +13,10 @@ namespace AppBiblioteca
         public string direccion;
         public string sexo;
         public string edad;
+        public CLector()
+        {
 
+        }
         public CLector(string PidLector, string Papellidos, string Pnombres, string Pdireccion, string Psexo, string Pedad): base(PidLector)
         {
         

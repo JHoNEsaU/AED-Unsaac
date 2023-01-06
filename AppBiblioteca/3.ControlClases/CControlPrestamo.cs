@@ -6,5 +6,6 @@ namespace AppBiblioteca._3.ControlClases
 {
     internal class CControlPrestamo
     {
+
     }
 }

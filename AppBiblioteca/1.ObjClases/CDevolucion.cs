@@ -15,6 +15,11 @@ namespace AppBiblioteca
         private string aIdPrestamo;
         protected internal static CListaObjetos Devoluciones = new CListaObjetos();
 
+        public CDevolucion()
+        {
+
+        }
+
         public CDevolucion(string pIdDevolucion, string pFechaDevolucion, string pIdPrestamo):base(pIdDevolucion)
         {
             

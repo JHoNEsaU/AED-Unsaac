@@ -15,6 +15,11 @@ namespace AppBiblioteca
         private string aIdLibro;
         protected internal static CListaObjetos LibPrestamos = new CListaObjetos();
 
+        public CPrestamo()
+        {
+
+        }
+
         public CPrestamo(string pIdPrestamo, string pFechaPrestamo, string pFechaDevolucion, 
             string pIdLector, string pIdLibro):base(pIdPrestamo)
         {

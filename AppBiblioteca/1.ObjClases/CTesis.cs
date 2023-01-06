@@ -14,6 +14,10 @@ namespace AppBiblioteca
         public string area;
         public string asesor;
 
+        public CTesis()
+        {
+
+        }
         public CTesis(string PidTesis, string Ptitulo, string Pautor, string Panio,string Parea, string Pasesor)
         {
             idTesis = PidTesis;

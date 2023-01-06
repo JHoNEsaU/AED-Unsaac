@@ -6,6 +6,7 @@ namespace AppBiblioteca
 {
     internal class CDatos
     {
+
     }
 
 }
