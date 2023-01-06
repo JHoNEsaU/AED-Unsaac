@@ -69,9 +69,9 @@ namespace AppBiblioteca
             // ----- Poner Titulo
             Console.WriteLine();
             Console.WriteLine("========================================================================");
-            Console.WriteLine("                          RELACION DE LIBROS");
+            Console.WriteLine("                          RELACION DE TESIS");
             Console.WriteLine("========================================================================");
-            Console.WriteLine("Id".PadRight(10) + "Titulo".PadRight(30) + "Autor".PadRight(20) + "Año".PadLeft(5) + " Especialidad".PadRight(15));
+            Console.WriteLine("Id Tesis".PadRight(15) + "Titulo".PadRight(15) + "Autor".PadRight(15) + "Año".PadRight(15) + "Area".PadRight(15) +" Asesor".PadRight(15));
             Console.WriteLine("------------------------------------------------------------------------");
             RecorrerListado();
             

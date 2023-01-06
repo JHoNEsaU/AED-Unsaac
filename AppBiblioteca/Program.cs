@@ -10,13 +10,9 @@ namespace AppBiblioteca
     {
         static void Main(string[] args)
         {
-            //CControlGeneral controlGeneral = new CControlGeneral();
-            //controlGeneral.EJECUTARPRINCIPAL();
-            CListaTesis a = new CListaTesis();
-            a.AgregarTesis();
-            a.AgregarTesis();
-            a.Listado.Ubicacion(a.Listado.Iesimo(1));
-            a.mostrar();
+            CControlGeneral controlGeneral = new CControlGeneral();
+            controlGeneral.EJECUTARPRINCIPAL();
+
 
         }
     }

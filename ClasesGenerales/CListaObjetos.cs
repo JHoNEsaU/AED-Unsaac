@@ -75,7 +75,7 @@ namespace ClasesGenerales
         public virtual void ProcesarObjeto(Object O)
         {
             CObjeto Objeto = (O as CObjeto);
-            Objeto.Escribir();
+            Objeto.Mostrar();
 
         }
 
@@ -101,9 +101,9 @@ namespace ClasesGenerales
             {
                 // ----- Procesar K-ésimo Objeto
                 if (deProcesarObjeto != null)
-                    deProcesarObjeto(Listado.Ubicacion(K));
+                    deProcesarObjeto(Listado.Iesimo(K));
                 else
-                    ProcesarObjeto(Listado.Ubicacion(K));
+                    ProcesarObjeto(Listado.Iesimo(K));
             }
                 
         }

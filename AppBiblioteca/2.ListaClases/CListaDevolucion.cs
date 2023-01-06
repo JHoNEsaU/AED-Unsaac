@@ -69,9 +69,9 @@ namespace AppBiblioteca
             // ----- Poner Titulo
             Console.WriteLine();
             Console.WriteLine("========================================================================");
-            Console.WriteLine("                          RELACION DE LIBROS");
+            Console.WriteLine("                          RELACION DE DEVOLUCIONES");
             Console.WriteLine("========================================================================");
-            Console.WriteLine("Id".PadRight(10) + "Titulo".PadRight(30) + "Autor".PadRight(20) + "Año".PadLeft(5) + " Especialidad".PadRight(15));
+            Console.WriteLine("Id Devolucion".PadRight(20) + "Fecha de Devolucion".PadRight(20) + "Id de Prestamo".PadRight(20));
             Console.WriteLine("------------------------------------------------------------------------");
             RecorrerListado();
         }

@@ -73,7 +73,7 @@ namespace AppBiblioteca
         }
         public override void Mostrar()
         {
-            base.Mostrar();
+            Console.WriteLine(Id.PadRight(20) + aFechaPrestamo.PadRight(20) + FechaDevolucion.PadRight(20) + IdLector.PadRight(20) + IdLibro.PadRight(20));
         }
 
         public override void Escribir()

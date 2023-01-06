@@ -78,9 +78,9 @@ namespace AppBiblioteca
         }
         public override void Mostrar()
         {
-            Console.WriteLine();
-            Console.WriteLine(Id);
-            Console.WriteLine();
+            
+            Console.WriteLine(Id.PadRight(20) + Titulo.PadRight(20) + Autor.PadRight(20) + Anio.PadRight(20) + Area.PadRight(20) + Asesor.PadRight(20));
+            
         }
 
         public override void Escribir()
