@@ -161,5 +161,17 @@ namespace EstDatos
                 aSubLista.Mostrar();
             }
         }
+
+        public virtual void Reemplazar(Object pElemento, int posicion)
+        {// validar la posicion de insercion
+            if (1 <= posicion && posicion <= Longitud() + 1)
+            {
+                insertar(pElemento, posicion);
+                eliminar(posicion + 1);
+            }
+            else
+                Console.WriteLine("ERROR: Posición incorrecta");
+
+        }
     }
 }

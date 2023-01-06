@@ -5,12 +5,16 @@ using ClasesGenerales;
 
 namespace AppBiblioteca
 {
-    internal class CControlGeneral
+    public class CControlGeneral
     {
-        CControlLector controlLector = new CControlLector();
-        CControlPrestamo controlPrestamo = new CControlPrestamo();
-        CControlTesis controlTesis = new CControlTesis();
-        CControlDevolucion controlDevolucion = new CControlDevolucion();
+        public static CControlLector controlLector = new CControlLector();
+        public static CControlPrestamo controlPrestamo = new CControlPrestamo();
+        public static CControlTesis  controlTesis = new CControlTesis();
+        public static CControlDevolucion controlDevolucion = new CControlDevolucion();
+        public CControlPrestamo ControlPrestamo
+        {
+            get { return controlPrestamo; }
+        }
         public void MENU()
         {
             Console.WriteLine("");

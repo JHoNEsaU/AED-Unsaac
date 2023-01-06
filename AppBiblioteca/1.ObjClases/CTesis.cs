@@ -5,7 +5,7 @@ using ClasesGenerales;
 
 namespace AppBiblioteca
 {
-    class CTesis : CObjeto
+    public class CTesis : CObjeto
     {
         public string titulo;
         public string autor;

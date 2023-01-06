@@ -5,7 +5,7 @@ using ClasesGenerales;
 
 namespace AppBiblioteca
 {
-    internal class CListaLector : CListaObjetos
+    public class CListaLector : CListaObjetos
     {
         #region *********************** METODOS ************************
 

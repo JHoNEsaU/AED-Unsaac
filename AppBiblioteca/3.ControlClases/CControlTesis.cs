@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppBiblioteca
 {
-    internal class CControlTesis
+    public class CControlTesis
     {
         #region *********************** ATRIBUTOS ************************
         private CListaTesis aListaTesis;

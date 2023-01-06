@@ -5,7 +5,7 @@ using ClasesGenerales;
 
 namespace AppBiblioteca
 {
-    class CLector : CObjeto
+    public class CLector : CObjeto
     {
         //public string idLector; // ---> Heredando ID de CObjeto
         public string apellidos;

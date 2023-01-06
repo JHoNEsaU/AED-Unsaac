@@ -10,7 +10,6 @@ namespace AppBiblioteca
 {
     public class CDevolucion : CObjeto
     {
-        private string aIdDevolucion;
         private string aFechaDevolucion;
         private string aIdPrestamo;
         protected internal static CListaObjetos Devoluciones = new CListaObjetos();
@@ -23,7 +22,6 @@ namespace AppBiblioteca
         public CDevolucion(string pIdDevolucion, string pFechaDevolucion, string pIdPrestamo):base(pIdDevolucion)
         {
             
-            aIdDevolucion = pIdDevolucion;
             aFechaDevolucion = pFechaDevolucion;
             aIdPrestamo = pIdPrestamo;
         }

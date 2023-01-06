@@ -26,10 +26,36 @@ namespace AppBiblioteca
             CDevolucion devolucion = new CDevolucion();
             devolucion.Leer();
             // ----- Agregar objeto a la Lista de Libros
-            Agregar(devolucion);
+            if(CControlGeneral.controlPrestamo.ListaLector.BuscarPrestamoID(devolucion.IdPrestamo) != null)
+            {
+                Agregar(devolucion);
+
+                // ----- Eliminar Prestamo
+                CControlGeneral.controlPrestamo.ListaLector.Listado.Eliminar(CControlGeneral.controlPrestamo.ListaLector.BuscarPrestamoID(devolucion.IdPrestamo));
+            }
+            else
+            {
+                Console.WriteLine("Prestamo no encontrado");
+            }
+            
+
         }
 
         // ==============================================================
+        public CDevolucion BuscarDevolucionID(string ID)
+        {
+
+            // ----- Determinar Indice o ubicacion del libro
+            int I = Indice(ID);
+            if (I >= 0)
+            {
+                CDevolucion OLibro = (Listado.Iesimo(I) as CDevolucion);
+                return OLibro;
+            }
+            else
+                // ----- Objeto no existe en el listado, por tanto poner mensaje de error 
+                return null;
+        }
         public void BuscarDevolucion()
         {
             // ----- Leer el identificador de libro que se desea buscar
@@ -84,23 +110,6 @@ namespace AppBiblioteca
             SeleccionarLibros();
         }
 
-        // ======================================================
-        public void SeleccionarLibrosAutor()
-        {
-            //// ----- Leer el autor
-            //Console.WriteLine("");
-            //Console.Write("Ingrese el Autor: ");
-            //string Autor = Console.ReadLine();
-
-            //// ----- Asignar método al delegado 
-            //deProcesarObjeto = delegate (Object O) {
-            //    CLector OLibro = O as CLector;
-            //    if (OLibro.Autor.Equals(Autor))
-            //        OLibro.Escribir();
-            //};
-            //// ----- Mostrar la lista de libros de este autor
-            //SeleccionarLibros();
-        }
 
         #endregion ===================    OTROS     =======================
 

@@ -5,7 +5,7 @@ using ClasesGenerales;
 
 namespace AppBiblioteca
 {
-    internal class CControlLector
+    public class CControlLector
     {
         #region *********************** ATRIBUTOS ************************
         private CListaLector aListaLector;

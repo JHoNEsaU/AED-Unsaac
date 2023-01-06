@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppBiblioteca
 {
-    internal class CControlDevolucion
+    public class CControlDevolucion
     {
         #region *********************** ATRIBUTOS ************************
         private CListaDevolucion aListaDevolucion;
@@ -41,7 +41,8 @@ namespace AppBiblioteca
             Console.WriteLine("2.- Eliminar Devolucion");
             Console.WriteLine("3.- Listar Devoluciones");
             Console.WriteLine("4.- Buscar Devolucion");
-            Console.WriteLine("5.- Salir");
+            Console.WriteLine("5.- Lista de tesis que no se devolvieron");
+            Console.WriteLine("6.- Salir");
         }
 
         // ======================================================
@@ -70,9 +71,13 @@ namespace AppBiblioteca
                     case 4:
                         ListaLector.BuscarDevolucion();
                         break;
+                    case 5:
+                        CControlGeneral.controlPrestamo.ListaLector.ListarPrestamo();
+                        break;
+
 
                 } // -- fin de switch 
-            } while (Opcion < 5);
+            } while (Opcion < 6);
         }
         #endregion ===================    OTROS     =======================
 

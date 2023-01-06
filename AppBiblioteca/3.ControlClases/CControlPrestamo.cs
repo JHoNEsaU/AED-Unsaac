@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppBiblioteca
 {
-    internal class CControlPrestamo
+    public class CControlPrestamo
     {
         #region *********************** ATRIBUTOS ************************
         private CListaPrestamo aListaPrestamo;
@@ -41,7 +41,8 @@ namespace AppBiblioteca
             Console.WriteLine("2.- Eliminar Prestamo");
             Console.WriteLine("3.- Listar Prestamo");
             Console.WriteLine("4.- Buscar Prestamo");
-            Console.WriteLine("5.- Salir");
+            Console.WriteLine("5.- Prestamos en una fecha determinada ");
+            Console.WriteLine("6.- Salir");
         }
 
         // ======================================================
@@ -70,9 +71,12 @@ namespace AppBiblioteca
                     case 4:
                         ListaLector.BuscarPrestamo();
                         break;
+                    case 5:
+                        ListaLector.ListaPrestamosFechaDeterminada();
+                        break;
 
                 } // -- fin de switch 
-            } while (Opcion < 5);
+            } while (Opcion < 6);
         }
         #endregion ===================    OTROS     =======================
 

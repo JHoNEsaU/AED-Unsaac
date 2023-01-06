@@ -26,8 +26,34 @@ namespace AppBiblioteca
             // ----- Crear objeto Libro y leer sus datos 
             CPrestamo prestamo = new CPrestamo();
             prestamo.Leer();
-            // ----- Agregar objeto a la Lista de Libros
-            Agregar(prestamo);
+            if (CControlGeneral.controlDevolucion.ListaLector.BuscarDevolucionID(prestamo.Id) == null)
+            {
+                // ----- Agregar objeto a la Lista de Libros
+                Agregar(prestamo);
+
+                // ----- Eliminar Prestamo
+                CControlGeneral.controlDevolucion.ListaLector.Listado.Eliminar(CControlGeneral.controlDevolucion.ListaLector.BuscarDevolucionID(prestamo.Id));
+            }
+            else
+            {
+                Console.WriteLine("Devolucion no encontrada");
+            }
+            
+        }
+
+        public CPrestamo BuscarPrestamoID(string ID)
+        {
+
+            // ----- Determinar Indice o ubicacion del libro
+            int I = Indice(ID);
+            if (I >= 0)
+            {
+                CPrestamo OLibro = (Listado.Iesimo(I) as CPrestamo);
+                return OLibro;
+            }
+            else
+                // ----- Objeto no existe en el listado, por tanto poner mensaje de error 
+                return null;
         }
 
         // ==============================================================
@@ -87,21 +113,39 @@ namespace AppBiblioteca
         }
 
         // ======================================================
-        public void SeleccionarLibrosAutor()
+        public void ListaPrestamosFechaDeterminada()
         {
-            //// ----- Leer el autor
-            //Console.WriteLine("");
-            //Console.Write("Ingrese el Autor: ");
-            //string Autor = Console.ReadLine();
+            // ----- Leer la fecha
+            Console.WriteLine("");
+            Console.WriteLine("Ingrese la fecha  ASI -----> (dd/MM/AA): ");
+            string fecha = Console.ReadLine();
 
-            //// ----- Asignar método al delegado 
-            //deProcesarObjeto = delegate (Object O) {
-            //    CLector OLibro = O as CLector;
-            //    if (OLibro.Autor.Equals(Autor))
-            //        OLibro.Escribir();
-            //};
-            //// ----- Mostrar la lista de libros de este autor
-            //SeleccionarLibros();
+            // ----- Asignar método al delegado 
+            deProcesarObjeto = delegate (Object O)
+            {
+                CPrestamo prestamo = O as CPrestamo;
+                if (prestamo.FechaPrestamo.Equals(fecha)) prestamo.Escribir();
+            };
+            // ----- Mostrar la lista de libros de este autor
+            SeleccionarLibros();
+        }
+
+        public void ListarPrestamosFecha(CListaObjetos lista)
+        {
+            // ----- Leer el autor
+            Console.WriteLine("");
+            Console.Write("Ingrese la fecha: ");
+            string Fecha = Console.ReadLine();
+
+            // ----- Asignar método al delegado 
+            deProcesarObjeto = delegate (Object O)
+            {
+                CPrestamo OPrestamo = O as CPrestamo;
+                if (OPrestamo.FechaPrestamo == Fecha)
+                    OPrestamo.Escribir();
+            };
+            // ----- Mostrar la lista de libros de este autor
+            SeleccionarLibros();
         }
 
 
