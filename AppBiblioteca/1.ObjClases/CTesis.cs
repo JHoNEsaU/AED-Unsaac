@@ -92,6 +92,7 @@ namespace AppBiblioteca
             Console.WriteLine("Titulo              : " + titulo);
             Console.WriteLine("Autor               : " + autor);
             Console.WriteLine("Anio                : " + anio);
+            Console.WriteLine("Area                : " + Area);
             Console.WriteLine("Asesor              : " + asesor);
             Console.WriteLine("======================================");
         }

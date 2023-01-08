@@ -10,6 +10,7 @@ namespace AppBiblioteca
     {
         static void Main(string[] args)
         {
+            CDatos.EJECUTARDATOS();
             CControlGeneral controlGeneral = new CControlGeneral();
             controlGeneral.EJECUTARPRINCIPAL();
 

@@ -75,7 +75,7 @@ namespace ClasesGenerales
         public virtual void ProcesarObjeto(Object O)
         {
             CObjeto Objeto = (O as CObjeto);
-            Objeto.Mostrar();
+            Objeto.Escribir();
 
         }
 
