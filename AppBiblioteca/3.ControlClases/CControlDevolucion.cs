@@ -56,7 +56,7 @@ namespace AppBiblioteca
                 // ----- Leer Opcion 
                 Console.Write("Ingresa Opcion: ");
 
-                Opcion = CControlGeneral.leerOpcion();Opcion = CControlGeneral.leerOpcion();
+                Opcion = CControlGeneral.leerOpcion();
                 Console.WriteLine("");
                 switch (Opcion)
                 {

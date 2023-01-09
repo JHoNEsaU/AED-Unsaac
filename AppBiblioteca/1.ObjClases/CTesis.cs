@@ -62,7 +62,7 @@ namespace AppBiblioteca
 
         public override void Leer()
         {
-            Console.WriteLine(" ============ INTRODUCIR DATOS DE TESIS ============");
+            Console.WriteLine(" ====================================================== INTRODUCIR DATOS DE TESIS ====================================================== ");
             Console.WriteLine("Introducir ID de Tesis: ");
             Id = Console.ReadLine();
             Console.WriteLine("Introducir titulo: ");
@@ -87,14 +87,14 @@ namespace AppBiblioteca
         {
             Console.WriteLine();
             Console.WriteLine("           DATOS DE TESIS");
-            Console.WriteLine("======================================");
-            Console.WriteLine("Identificador tesis : " + Id);
-            Console.WriteLine("Titulo              : " + titulo);
-            Console.WriteLine("Autor               : " + autor);
-            Console.WriteLine("Anio                : " + anio);
-            Console.WriteLine("Area                : " + Area);
-            Console.WriteLine("Asesor              : " + asesor);
-            Console.WriteLine("======================================");
+            Console.WriteLine("========================================================================================================================================= ");
+            Console.WriteLine(" Identificador tesis : " + Id);
+            Console.WriteLine(" Titulo              : " + titulo);
+            Console.WriteLine(" Autor               : " + autor);
+            Console.WriteLine(" Anio                : " + anio);
+            Console.WriteLine(" Area                : " + Area);
+            Console.WriteLine(" Asesor              : " + asesor);
+            Console.WriteLine("========================================================================================================================================= ");
         }
 
     }

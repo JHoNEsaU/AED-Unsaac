@@ -127,12 +127,12 @@ namespace AppBiblioteca
         // ======================================================
         public void SeleccionarLibros()
         {
-            // ----- Poner Titulo
-            Console.WriteLine();
-            Console.WriteLine("========================================================================");
-            Console.WriteLine("                          RELACION DE PRESTAMOS");
-            Console.WriteLine("========================================================================");
-            Console.WriteLine("Id".PadRight(20) + "Fecha de Prestamo".PadRight(20) + "Fecha de Devolucion".PadRight(20) + "Id de Lector".PadRight(20) + "Id de Libro".PadRight(20));
+            //// ----- Poner Titulo
+            //Console.WriteLine();
+            //Console.WriteLine("========================================================================");
+            //Console.WriteLine("                          RELACION DE PRESTAMOS");
+            //Console.WriteLine("========================================================================");
+            //Console.WriteLine("Id".PadRight(20) + "Fecha de Prestamo".PadRight(20) + "Fecha de Devolucion".PadRight(20) + "Id de Lector".PadRight(20) + "Id de Libro".PadRight(20));
             Console.WriteLine("------------------------------------------------------------------------");
             RecorrerListado();
         }

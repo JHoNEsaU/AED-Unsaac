@@ -78,13 +78,13 @@ namespace AppBiblioteca
         // ======================================================
         public void ListadoTesis()
         {
-            // ----- Poner Titulo
-            Console.WriteLine();
-            Console.WriteLine("========================================================================");
-            Console.WriteLine("                          RELACION DE TESIS");
-            Console.WriteLine("========================================================================");
-            Console.WriteLine("Id Tesis".PadRight(15) + "Titulo".PadRight(15) + "Autor".PadRight(15) + "Año".PadRight(15) + "Area".PadRight(15) +" Asesor".PadRight(15));
-            Console.WriteLine("------------------------------------------------------------------------");
+            //// ----- Poner Titulo
+            //Console.WriteLine();
+            //Console.WriteLine("========================================================================");
+            //Console.WriteLine("                          RELACION DE TESIS");
+            //Console.WriteLine("========================================================================");
+            //Console.WriteLine("Id Tesis".PadRight(15) + "Titulo".PadRight(15) + "Autor".PadRight(15) + "Año".PadRight(15) + "Area".PadRight(15) +" Asesor".PadRight(15));
+            //Console.WriteLine("------------------------------------------------------------------------");
             RecorrerListado();
             
         }

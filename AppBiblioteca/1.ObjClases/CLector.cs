@@ -55,7 +55,7 @@ namespace AppBiblioteca
         #endregion
         public override void Leer()
         {
-            Console.WriteLine(" ============ INTRODUCIR DATOS DE LECTOR ============");
+            Console.WriteLine(" ============================================================ INTRODUCIR DATOS DE LECTOR ============================================================ ");
             Console.WriteLine("Introducir ID de Lector: ");
             Id = Console.ReadLine();
             Console.WriteLine("Introducir apellidos: ");
@@ -77,15 +77,15 @@ namespace AppBiblioteca
         public override void Escribir()
         {
             Console.WriteLine();
-            Console.WriteLine("           DATOS DE OBJETO");
-            Console.WriteLine("======================================");
-            Console.WriteLine("Identificador: " + Id);
-            Console.WriteLine("Apellidos    : " + apellidos);
-            Console.WriteLine("Nombres      : " + nombres);
-            Console.WriteLine("Direccion    : " + direccion);
-            Console.WriteLine("Sexo         : " + sexo);
-            Console.WriteLine("Edad         : " + edad);
-            Console.WriteLine("======================================");
+            Console.WriteLine("                                            DATOS DE OBJETO");
+            Console.WriteLine("=================================================================================================== ");
+            Console.WriteLine(" Identificador: " + Id);
+            Console.WriteLine(" Apellidos    : " + apellidos);
+            Console.WriteLine(" Nombres      : " + nombres);
+            Console.WriteLine(" Direccion    : " + direccion);
+            Console.WriteLine(" Sexo         : " + sexo);
+            Console.WriteLine(" Edad         : " + edad);
+            Console.WriteLine("===================================================================================================");
         }
     }
 }

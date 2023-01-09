@@ -61,12 +61,12 @@ namespace AppBiblioteca
         public override void Escribir()
         {
             Console.WriteLine();
-            Console.WriteLine("         DATOS DE DEVOLUCION");
-            Console.WriteLine("======================================");
-            Console.WriteLine("Identificador devolucion : " + Id);
-            Console.WriteLine("Fecha de devolucion      : " + aFechaDevolucion);
-            Console.WriteLine("Identificador prestamo   : " + aIdPrestamo);
-            Console.WriteLine("======================================");
+            Console.WriteLine("                                  DATOS DE DEVOLUCION");
+            Console.WriteLine("===================================================================================================");
+            Console.WriteLine(" Identificador devolucion : " + Id);
+            Console.WriteLine(" Fecha de devolucion      : " + aFechaDevolucion);
+            Console.WriteLine(" Identificador prestamo   : " + aIdPrestamo);
+            Console.WriteLine("===================================================================================================");
         }
 
     }

@@ -77,13 +77,13 @@ namespace AppBiblioteca
         // ======================================================
         public void SeleccionarLibros()
         {
-            // ----- Poner Titulo
-            Console.WriteLine();
-            Console.WriteLine("========================================================================");
-            Console.WriteLine("                          RELACION DE LECTORES                           ");
-            Console.WriteLine("========================================================================");
-            Console.WriteLine("Id Lector".PadRight(20) + "Apellidos".PadRight(20) + "Nombres".PadRight(20) + "Direccion".PadRight(20) + "Sexo".PadRight(20) + "Edad".PadRight(20));
-            Console.WriteLine("------------------------------------------------------------------------");
+            //// ----- Poner Titulo
+            //Console.WriteLine();
+            //Console.WriteLine("========================================================================");
+            //Console.WriteLine("                          RELACION DE LECTORES                           ");
+            //Console.WriteLine("========================================================================");
+            //Console.WriteLine("Id Lector".PadRight(20) + "Apellidos".PadRight(20) + "Nombres".PadRight(20) + "Direccion".PadRight(20) + "Sexo".PadRight(20) + "Edad".PadRight(20));
+            //Console.WriteLine("------------------------------------------------------------------------");
             RecorrerListado();
         }
         // ======================================================

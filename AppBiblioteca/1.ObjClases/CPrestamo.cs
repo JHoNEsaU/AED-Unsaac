@@ -58,7 +58,7 @@ namespace AppBiblioteca
         #endregion
         public override void Leer()
         {
-            Console.WriteLine(" ============ INTRODUCIR DATOS DE PRESTAMO ============");
+            Console.WriteLine(" ============================================================ INTRODUCIR DATOS DE PRESTAMO ============================================================ ");
             Console.WriteLine("Introducir ID de prestamo: ");
             Id = Console.ReadLine();
             Console.WriteLine("Introducir fecha de prestamo: ");
@@ -80,13 +80,13 @@ namespace AppBiblioteca
         {
             Console.WriteLine();
             Console.WriteLine("           DATOS DE OBJETO");
-            Console.WriteLine("======================================");
-            Console.WriteLine("Identificador prestamo : " + Id);
-            Console.WriteLine("Fecha de prestamo      : " + aFechaPrestamo);
-            Console.WriteLine("Fecha de devolucion    : " + aFechaDevolucion);
-            Console.WriteLine("Identificador lector   : " + aIdLector);
-            Console.WriteLine("Identificador libro    : " + aIdLibro);
-            Console.WriteLine("======================================");
+            Console.WriteLine("===================================================================== ");
+            Console.WriteLine(" Identificador prestamo : " + Id);
+            Console.WriteLine(" Fecha de prestamo      : " + aFechaPrestamo);
+            Console.WriteLine(" Fecha de devolucion    : " + aFechaDevolucion);
+            Console.WriteLine(" Identificador lector   : " + aIdLector);
+            Console.WriteLine(" Identificador libro    : " + aIdLibro);
+            Console.WriteLine("===================================================================== ");
         }
     }
 }
