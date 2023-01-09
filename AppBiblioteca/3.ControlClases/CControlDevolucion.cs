@@ -52,13 +52,14 @@ namespace AppBiblioteca
             int Opcion;
             do
             {
-                Console.Clear();
+              
                 Menu();
                 // ----- Leer Opcion 
                 Console.Write("Ingresa Opcion: ");
 
                 Opcion = CControlGeneral.leerOpcion();
                 Console.WriteLine("");
+                Console.Clear();
                 switch (Opcion)
                 {
                     case 1:

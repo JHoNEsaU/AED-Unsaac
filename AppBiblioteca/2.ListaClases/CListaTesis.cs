@@ -44,7 +44,7 @@ namespace AppBiblioteca
         {
             // ----- Leer el identificador de libro que se desea buscar
             Console.WriteLine();
-            Console.Write("Ingrese el identificador de Lector: ");
+            Console.Write("Ingrese el identificador de Tesis: ");
             string Id = Console.ReadLine();
             // ----- Determinar Indice o ubicacion del libro
             int I = Indice(Id);
@@ -63,7 +63,7 @@ namespace AppBiblioteca
         {
             // ----- Leer el identificador de libro que se desea buscar
             Console.WriteLine();
-            Console.Write("Ingrese el identificador de Lector: ");
+            Console.Write("Ingrese el identificador de Tesis: ");
             string Id = Console.ReadLine();
             // ----- Determinar Indice o ubicacion del libro
             int I = Indice(Id);
