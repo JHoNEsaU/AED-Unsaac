@@ -18,7 +18,7 @@ namespace AppBiblioteca
 
         #region ====================   OTROS     =======================
 
-        // ==============================================================
+        // ============================================================== AGREGAR TESIS VERIFICANDO SI EXISTE O NO ESTA
         public void AgregarTesis()
         {
             // ----- Crear objeto Libro y leer sus datos 
@@ -39,7 +39,7 @@ namespace AppBiblioteca
             
         }
 
-        // ==============================================================
+        // ============================================================== BUSCAR TESIS 
         public void BuscarTesis()
         {
             // ----- Leer el identificador de libro que se desea buscar
@@ -58,6 +58,7 @@ namespace AppBiblioteca
                 Console.WriteLine(Id + " No existe en la lista...");
         }
 
+        //====================================================== ELIMINAR TESIS DE LISTA
         public void EliminarTesis()
         {
             // ----- Leer el identificador de libro que se desea buscar
@@ -88,7 +89,7 @@ namespace AppBiblioteca
             RecorrerListado();
             
         }
-        // ======================================================
+        // ====================================================== LISTAR TESIS
         public void ListarTesis()
         {
             // ----- Asignar null al delegado 
@@ -102,8 +103,8 @@ namespace AppBiblioteca
             ListarTesis();
         }
 
-        // ======================================================
-        // ======================================================
+        
+        // ====================================================== LISTAR TESIS DE UN AREA Y ANIO EN ADELANTE 
         public void ListarTesisAreaAnioAdelante()
         {
             // ----- Leer el autor
@@ -112,38 +113,47 @@ namespace AppBiblioteca
             string Area = Console.ReadLine();
             Console.Write("Ingrese el Año: ");
             int Anio = int.Parse(Console.ReadLine());
-
+            Console.Write("======= Tesis del area de {0} desde el año {1} =========", Area, Anio);
             // ----- Asignar método al delegado 
             deProcesarObjeto = delegate (Object O)
             {
                 CTesis OTesis = O as CTesis;
-                if (OTesis.Area == Area && int.Parse(OTesis.Anio.Substring(6, 4)) >= Anio)
-                    OTesis.Mostrar();
+                if (OTesis.Area == Area && int.Parse(OTesis.Anio) >= Anio)
+                    OTesis.Escribir();
             };
             // ----- Mostrar la lista de libros de este autor
             RecorrerListado();
         }
+
+        // ====================================================== LISTAR TESIS DE ASESOR EN ESPECIFICO
         public void ListaTesisAsesorEspecifico()
         {
             // ----- Leer la fecha
             Console.WriteLine("");
             Console.WriteLine("Ingrese asesor ");
             string asesor = Console.ReadLine();
-
+            bool noHay = true;
+            Console.WriteLine("");
             // ----- Asignar método al delegado 
             deProcesarObjeto = delegate (Object O)
             {
                 CTesis tesis = O as CTesis;
-                if (tesis.Asesor.Equals(asesor)) tesis.Escribir();
+                if (tesis.Asesor == asesor) {
+                    noHay = false;
+                    tesis.Escribir();
+                }
+                
             };
             // ----- Mostrar la lista de libros de este autor
             ListadoTesis();
+            if (noHay) Console.WriteLine("Asesor no encontrado");
         }
 
         // ========================================================
         // -- Metodo listar 3 docentes con mayor numero de tesis aseroradas
         public void Listar3DocentesMayoresTesisAsesoradas()
         {
+
             CLista Docentes = new CLista();
             CLista Ocurrencias = new CLista();
             deProcesarObjeto = delegate (Object O)
@@ -162,6 +172,8 @@ namespace AppBiblioteca
                 }
             };
             RecorrerListado();
+            Console.WriteLine("");
+            Console.WriteLine("===== 3 Docentes con mayores tesis asesoradas =====");
             int i = 0;
             while (i < 3)
             {
@@ -179,6 +191,7 @@ namespace AppBiblioteca
                 Ocurrencias.Eliminar(mayor);
                 i++;
             }
+            Console.WriteLine("");
 
 
         }

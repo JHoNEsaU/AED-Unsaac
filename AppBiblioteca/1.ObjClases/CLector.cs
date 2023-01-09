@@ -7,12 +7,13 @@ namespace AppBiblioteca
 {
     public class CLector : CObjeto
     {
-        //public string idLector; // ---> Heredando ID de CObjeto
+        /// ---------------------------------------------- ATRIBUTOS ----------------------------------------------
         public string apellidos;
         public string nombres;
         public string direccion;
         public string sexo;
         public string edad;
+        // ---------------------------------------------- CONSTRUCTORES ----------------------------------------------
         public CLector()
         {
 
@@ -53,9 +54,10 @@ namespace AppBiblioteca
             set { edad = value; }
         }
         #endregion
+        // ------------- LEER DATOS 
         public override void Leer()
         {
-            Console.WriteLine(" ============================================================ INTRODUCIR DATOS DE LECTOR ============================================================ ");
+            Console.WriteLine(" ================================================ INTRODUCIR DATOS DE LECTOR ================================================== ");
             Console.WriteLine("Introducir ID de Lector: ");
             Id = Console.ReadLine();
             Console.WriteLine("Introducir apellidos: ");
@@ -69,23 +71,24 @@ namespace AppBiblioteca
             Console.WriteLine("Introducir edad: ");
             Edad = Console.ReadLine();
         }
+        // ------------- MOSTRAR DATOS
         public override void Mostrar()
         {
             Console.WriteLine(Id.PadRight(20) + Apellidos.PadRight(20) + Nombres.PadRight(20) + Direccion.PadRight(20) + Sexo.PadRight(20) + Edad.PadRight(20));
         }
-
+        // ------------- MOSTRAR DATOS
         public override void Escribir()
         {
             Console.WriteLine();
-            Console.WriteLine("                                            DATOS DE OBJETO");
-            Console.WriteLine("=================================================================================================== ");
+            Console.WriteLine("                                   DATOS DE LECTOR");
+            Console.WriteLine("==================================================================================== ");
             Console.WriteLine(" Identificador: " + Id);
             Console.WriteLine(" Apellidos    : " + apellidos);
             Console.WriteLine(" Nombres      : " + nombres);
             Console.WriteLine(" Direccion    : " + direccion);
             Console.WriteLine(" Sexo         : " + sexo);
             Console.WriteLine(" Edad         : " + edad);
-            Console.WriteLine("===================================================================================================");
+            Console.WriteLine("=====================================================================================");
         }
     }
 }

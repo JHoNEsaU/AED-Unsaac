@@ -20,10 +20,10 @@ namespace AppBiblioteca
 
         #region ====================   OTROS     =======================
 
-        // ==============================================================
+        // ============================================================== AGREGAR PRESTAMO VERIFICANDO SI EXISTE UN PRESTAMO, TAMBIEN UNA DEVOLUCION
         public void AgregarPrestamo()
         {
-            // ----- Crear objeto Libro y leer sus datos 
+            // ----- Crear objeto Prestamo y leer sus datos 
             CPrestamo prestamo = new CPrestamo();
             prestamo.Leer();
 
@@ -43,10 +43,10 @@ namespace AppBiblioteca
                     Agregar(prestamo);
                     Console.WriteLine("Elemento agregado correctamente");
                 }
-                // ----- Agregar objeto a la Lista de Libros
+                // ----- Agregar objeto a la Lista de Prestamos
+
                 
-                // ----- Eliminar Prestamo
-               
+
             }
             else
             {
@@ -62,21 +62,19 @@ namespace AppBiblioteca
                 }                else
                 {
                     Agregar(prestamo);
+                    // ----- Eliminar Prestamo
                     CControlGeneral.controlDevolucion.ListaDevolucion.Listado.Eliminar(CControlGeneral.controlDevolucion.ListaDevolucion.BuscarDevolucionID(prestamo.Id));
                     
                 }
-                // ----- Agregar objeto a la Lista de Libros
-
-                // ----- Eliminar Prestamo
                 
             }
             
         }
-
+        // ============================================================ BUSCAR PRESTAMO POR ID ============================================================
         public CPrestamo BuscarPrestamoID(string ID)
         {
 
-            // ----- Determinar Indice o ubicacion del libro
+            // ----- Determinar Indice o ubicacion del Prestamo
             int I = Indice(ID);
             if (I > 0)
             {
@@ -88,32 +86,33 @@ namespace AppBiblioteca
                 return null;
         }
 
-        // ==============================================================
+        // ============================================================== BUSCAR PRESTAMO ============================================================
         public void BuscarPrestamo()
         {
-            // ----- Leer el identificador de libro que se desea buscar
+            // ----- Leer el identificador de prestamo que se desea buscar
             Console.WriteLine();
-            Console.Write("Ingrese el identificador de Lector: ");
+            Console.Write("Ingrese el identificador del Prestamo: ");
             string Id = Console.ReadLine();
-            // ----- Determinar Indice o ubicacion del libro
+            // ----- Determinar Indice o ubicacion del prestamo
             int I = Indice(Id);
             if (I > 0)
             {
-                CPrestamo OLibro = (Listado.Iesimo(I) as CPrestamo);
-                OLibro.Escribir();
+                CPrestamo prestamo = (Listado.Iesimo(I) as CPrestamo);
+                prestamo.Escribir();
             }
             else
                 // ----- Objeto no existe en el listado, por tanto poner mensaje de error 
                 Console.WriteLine(Id + " No existe en la lista...");
         }
 
+        // ============================================================== ELIMUNAR PRESTAMO 
         public void EliminarPrestamo()
         {
-            // ----- Leer el identificador de libro que se desea buscar
+            // ----- Leer el identificador de prestamo que se desea buscar
             Console.WriteLine();
-            Console.Write("Ingrese el identificador de Lector: ");
+            Console.Write("Ingrese el identificador del Prestamo: ");
             string Id = Console.ReadLine();
-            // ----- Determinar Indice o ubicacion del libro
+            // ----- Determinar Indice o ubicacion del prestamo
             int I = Indice(Id);
             if (I > 0)
             {
@@ -124,7 +123,7 @@ namespace AppBiblioteca
                 // ----- Objeto no existe en el listado, por tanto poner mensaje de error 
                 Console.WriteLine(Id + " No existe en la lista...");
         }
-        // ======================================================
+        // ====================================================== 
         public void SeleccionarLibros()
         {
             //// ----- Poner Titulo
@@ -136,50 +135,43 @@ namespace AppBiblioteca
             Console.WriteLine("------------------------------------------------------------------------");
             RecorrerListado();
         }
-        // ======================================================
+        // ====================================================== LISTADO DE PRESTAMOS 
         public void ListarPrestamo()
         {
             // ----- Asignar null al delegado 
             deProcesarObjeto = null;
-            // ----- Mostrar la lista de libros 
+            // ----- Mostrar la lista de Prestamo 
             SeleccionarLibros();
         }
 
-        // ======================================================
+        // ====================================================== LISTAR PRESTAMOS DE UNA FECHA DETERMINDA
         public void ListaPrestamosFechaDeterminada()
         {
             // ----- Leer la fecha
             Console.WriteLine("");
             Console.WriteLine("Ingrese la fecha  ASI -----> (dd/MM/AA): ");
-            string fecha = Console.ReadLine();
-
-            // ----- Asignar método al delegado 
-            deProcesarObjeto = delegate (Object O)
-            {
-                CPrestamo prestamo = O as CPrestamo;
-                if (prestamo.FechaPrestamo.Equals(fecha)) prestamo.Escribir();
-            };
-            // ----- Mostrar la lista de libros de este autor
-            SeleccionarLibros();
-        }
-
-        public void ListarPrestamosFecha(CListaObjetos lista)
-        {
-            // ----- Leer el autor
             Console.WriteLine("");
-            Console.Write("Ingrese la fecha: ");
-            string Fecha = Console.ReadLine();
-
+            string fecha = Console.ReadLine();
+            Console.WriteLine("======= Prestamos en la fecha {0} ========", fecha);
             // ----- Asignar método al delegado 
+            bool noHay = true;
             deProcesarObjeto = delegate (Object O)
             {
                 CPrestamo OPrestamo = O as CPrestamo;
-                if (OPrestamo.FechaPrestamo == Fecha)
+                if (OPrestamo.FechaPrestamo == fecha)
+                {
+                    noHay = false;
                     OPrestamo.Escribir();
+                }
+                
             };
             // ----- Mostrar la lista de libros de este autor
             SeleccionarLibros();
+            if (noHay) Console.WriteLine("No hay prestamos en la fecha especificada");
         }
+
+        // ====================================================== LISTAR PRESTAMOS 
+
 
 
 

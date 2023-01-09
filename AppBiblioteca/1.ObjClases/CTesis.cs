@@ -7,12 +7,14 @@ namespace AppBiblioteca
 {
     public class CTesis : CObjeto
     {
+        // ---------------------------------------------- ATRIBUTOS ----------------------------------------------
         public string titulo;
         public string autor;
         public string anio;
         public string area;
         public string asesor;
 
+        // ---------------------------------------------- CONSTRUCTORES ----------------------------------------------
         public CTesis()
         {
 
@@ -60,9 +62,11 @@ namespace AppBiblioteca
         }
         #endregion
 
+        // ================================== LEER DATOS DE TESIS 
+
         public override void Leer()
         {
-            Console.WriteLine(" ====================================================== INTRODUCIR DATOS DE TESIS ====================================================== ");
+            Console.WriteLine(" ============================================ INTRODUCIR DATOS DE TESIS ================================================ ");
             Console.WriteLine("Introducir ID de Tesis: ");
             Id = Console.ReadLine();
             Console.WriteLine("Introducir titulo: ");
@@ -82,19 +86,20 @@ namespace AppBiblioteca
             Console.WriteLine(Id.PadRight(20) + Titulo.PadRight(20) + Autor.PadRight(20) + Anio.PadRight(20) + Area.PadRight(20) + Asesor.PadRight(20));
             
         }
+        // ==================================== MOSTRAR DATOS DE TESIS 
 
         public override void Escribir()
         {
             Console.WriteLine();
             Console.WriteLine("           DATOS DE TESIS");
-            Console.WriteLine("========================================================================================================================================= ");
+            Console.WriteLine("========================================================================================================================= ");
             Console.WriteLine(" Identificador tesis : " + Id);
             Console.WriteLine(" Titulo              : " + titulo);
             Console.WriteLine(" Autor               : " + autor);
             Console.WriteLine(" Anio                : " + anio);
             Console.WriteLine(" Area                : " + Area);
             Console.WriteLine(" Asesor              : " + asesor);
-            Console.WriteLine("========================================================================================================================================= ");
+            Console.WriteLine("========================================================================================================================== ");
         }
 
     }

@@ -29,13 +29,13 @@ namespace AppBiblioteca
 
         #region ====================   OTROS     =======================
 
-        // ======================================================
+        // ====================================================== SUB MENU DE CONTROL PRESTAMO
         public void Menu()
         {
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("**************************************");
-            Console.WriteLine("*       CONTROL DE LECTOR            *");
+            Console.WriteLine("*       CONTROL DE PRESTAMO           *");
             Console.WriteLine("**************************************");
             Console.WriteLine("1.- Agergar Prestamo");
             Console.WriteLine("2.- Eliminar Prestamo");
@@ -45,13 +45,14 @@ namespace AppBiblioteca
             Console.WriteLine("6.- Salir");
         }
 
-        // ======================================================
+        // ====================================================== INICIAR SUB MENU
         public void Ejecutar()
         {
             // ----- Procesar opciones y Menu
             int Opcion;
             do
             {
+                Console.Clear();
                 Menu();
                 // ----- Leer Opcion 
                 Console.Write("Ingresa Opcion: ");

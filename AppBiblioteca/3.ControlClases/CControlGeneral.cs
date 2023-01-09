@@ -7,6 +7,7 @@ namespace AppBiblioteca
 {
     public class CControlGeneral
     {
+        // ===================================== INICIALIZANDO CONTROLES DE CLASE =====================================
         public static CControlLector controlLector = new CControlLector();
         public static CControlPrestamo controlPrestamo = new CControlPrestamo();
         public static CControlTesis  controlTesis = new CControlTesis();
@@ -15,6 +16,7 @@ namespace AppBiblioteca
         {
             get { return controlPrestamo; }
         }
+        // ====================================================== MENU DE CONTROL GENERAL
         public void MENU()
         {
             Console.WriteLine("");
@@ -26,9 +28,11 @@ namespace AppBiblioteca
             Console.WriteLine("2.- Operacion Lectores");
             Console.WriteLine("3.- Operacion Prestamos");
             Console.WriteLine("4.- Operacion Devoluciones");
-            Console.WriteLine("5.- Salir");
+            Console.WriteLine("5.- Operaciones de Reportes");
+            Console.WriteLine("6.- Salir");
         }
 
+        // ==================================================== LEER OPCION VALIDANDO
         static public int leerOpcion()
         {
             int opcion = 0;
@@ -38,6 +42,7 @@ namespace AppBiblioteca
             }
             catch (Exception e)
             {
+              
                 Console.Write("Introducir input correctamente : " );
                 leerOpcion();
                 Console.Clear();
@@ -45,16 +50,18 @@ namespace AppBiblioteca
             return opcion;
         }
 
+        // ====================================================== INICIAR MENU PRINCIPAL
         public void EJECUTARPRINCIPAL()
         {
             // ----- Procesar opciones y Menu
             int Opcion;
             do
             {
+                Console.Clear();
                 MENU();
                 // ----- Leer Opcion 
                 Console.Write("Ingresa Opcion: ");
-                Opcion = int.Parse(Console.ReadLine());
+                Opcion = leerOpcion();
                 Console.WriteLine("");
                 switch (Opcion)
                 {
@@ -69,6 +76,9 @@ namespace AppBiblioteca
                         break;
                     case 4:
                         controlDevolucion.Ejecutar();
+                        break;
+                    case 5:
+                        CControlReportes.Ejecutar();
                         break;
 
                 } // -- fin de switch 

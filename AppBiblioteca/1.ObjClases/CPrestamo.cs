@@ -8,12 +8,14 @@ namespace AppBiblioteca
 {
     public class CPrestamo : CObjeto
     {
+        // ---------------------------------------------- ATRIBUTOS ----------------------------------------------
         private string aFechaPrestamo;
         private string aFechaDevolucion;
         private string aIdLector;
         private string aIdLibro;
         protected internal static CListaObjetos LibPrestamos = new CListaObjetos();
 
+        // ---------------------------------------------- CONSTRUCTORES ----------------------------------------------
         public CPrestamo()
         {
 
@@ -56,9 +58,10 @@ namespace AppBiblioteca
         }
 
         #endregion
+        // ------------- LEER DATOS
         public override void Leer()
         {
-            Console.WriteLine(" ============================================================ INTRODUCIR DATOS DE PRESTAMO ============================================================ ");
+            Console.WriteLine(" ===================================================== INTRODUCIR DATOS DE PRESTAMO ====================================================== ");
             Console.WriteLine("Introducir ID de prestamo: ");
             Id = Console.ReadLine();
             Console.WriteLine("Introducir fecha de prestamo: ");
@@ -71,21 +74,22 @@ namespace AppBiblioteca
             IdLibro = Console.ReadLine();
 
         }
+        // ------------- MOSTRAR DATOS
         public override void Mostrar()
         {
             Console.WriteLine(Id.PadRight(20) + aFechaPrestamo.PadRight(20) + FechaDevolucion.PadRight(20) + IdLector.PadRight(20) + IdLibro.PadRight(20));
         }
-
+        // ------------- MOSTRAR DATOS
         public override void Escribir()
         {
             Console.WriteLine();
-            Console.WriteLine("           DATOS DE OBJETO");
+            Console.WriteLine("                      DATOS DEL PRESTAMO");
             Console.WriteLine("===================================================================== ");
             Console.WriteLine(" Identificador prestamo : " + Id);
             Console.WriteLine(" Fecha de prestamo      : " + aFechaPrestamo);
             Console.WriteLine(" Fecha de devolucion    : " + aFechaDevolucion);
             Console.WriteLine(" Identificador lector   : " + aIdLector);
-            Console.WriteLine(" Identificador libro    : " + aIdLibro);
+            Console.WriteLine(" Identificador Tesis    : " + aIdLibro);
             Console.WriteLine("===================================================================== ");
         }
     }

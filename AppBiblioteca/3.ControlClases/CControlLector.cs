@@ -30,7 +30,7 @@ namespace AppBiblioteca
 
         #region ====================   OTROS     =======================
 
-        // ======================================================
+        // ====================================================== SUB MENU DE CONTROL LECTOR 
         public void Menu()
         {
             Console.WriteLine("");
@@ -45,13 +45,14 @@ namespace AppBiblioteca
             Console.WriteLine("5.- Salir");
         }
 
-        // ======================================================
+        // ====================================================== INICIAR SUB MENU
         public void Ejecutar()
         {
             // ----- Procesar opciones y Menu
             int Opcion;
             do
             {
+                Console.Clear();
                 Menu();
                 // ----- Leer Opcion 
                 Console.Write("Ingresa Opcion: ");

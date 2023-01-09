@@ -30,7 +30,7 @@ namespace AppBiblioteca
             {
                 Agregar(devolucion);
                 CControlGeneral.controlPrestamo.ListaPrestamo.Listado.Eliminar(CControlGeneral.controlPrestamo.ListaPrestamo.BuscarPrestamoID(devolucion.IdPrestamo));
-                Console.Write("Se agrego correctamente el Elemento");
+                Console.Write("La devolución se realizo satisfactoriamente");
             }
             else
             {
@@ -44,7 +44,7 @@ namespace AppBiblioteca
         public CDevolucion BuscarDevolucionID(string ID)
         {
 
-            // ----- Determinar Indice o ubicacion del libro
+            // ----- Determinar Indice o ubicacion 
             int I = Indice(ID);
             if (I > 0)
             {
@@ -57,11 +57,11 @@ namespace AppBiblioteca
         }
         public void BuscarDevolucion()
         {
-            // ----- Leer el identificador de libro que se desea buscar
+            // ----- Leer el identificador de Devolucion que se desea buscar
             Console.WriteLine();
-            Console.Write("Ingrese el identificador de Lector: ");
+            Console.Write("Ingrese el identificador de la Devolución: ");
             string Id = Console.ReadLine();
-            // ----- Determinar Indice o ubicacion del libro
+            // ----- Determinar Indice o ubicacion
             int I = Indice(Id);
             if (I > 0)
             {
@@ -74,11 +74,11 @@ namespace AppBiblioteca
         }
         public void EliminarDevolucion()
         {
-            // ----- Leer el identificador de libro que se desea buscar
+            // ----- Leer el identificador de Devolucion que se desea buscar
             Console.WriteLine();
-            Console.Write("Ingrese el identificador de Lector: ");
+            Console.Write("Ingrese el identificador de la devolucion: ");
             string Id = Console.ReadLine();
-            // ----- Determinar Indice o ubicacion del libro
+            // ----- Determinar Indice o ubicacion del Devolucion
             int I = Indice(Id);
             if (I > 0)
             {
@@ -106,7 +106,7 @@ namespace AppBiblioteca
         {
             // ----- Asignar null al delegado 
             deProcesarObjeto = null;
-            // ----- Mostrar la lista de libros 
+            // ----- Mostrar la lista de Devolucion 
             SeleccionarLibros();
         }
 

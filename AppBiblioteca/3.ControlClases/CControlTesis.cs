@@ -29,28 +29,32 @@ namespace AppBiblioteca
 
         #region ====================   OTROS     =======================
 
-        // ======================================================
+        // ====================================================== SUB MENU DE CONTROL TESIS
         public void Menu()
         {
             Console.WriteLine("");
             Console.WriteLine("");
-            Console.WriteLine("**************************************");
-            Console.WriteLine("*       CONTROL DE LECTOR            *");
-            Console.WriteLine("**************************************");
+            Console.WriteLine("************************************************************");
+            Console.WriteLine("*                        CONTROL DE TESIS                  *");
+            Console.WriteLine("************************************************************");
             Console.WriteLine("1.- Agregar Tesis");
             Console.WriteLine("2.- Eliminar Tesis");
             Console.WriteLine("3.- Listar Tesis");
             Console.WriteLine("4.- Buscar Tesis");
-            Console.WriteLine("5.- Salir");
+            Console.WriteLine("5.- Listar tesis de un area y anio en especifico");
+            Console.WriteLine("6.- Listar Tesis de asesor en especifico");
+            Console.WriteLine("7.- Listar 3 docentes con mayor numero de tesis aseroradas");
+            Console.WriteLine("8.- Salir");
         }
 
-        // ======================================================
+        // ====================================================== INICIAR SUB MENU
         public void Ejecutar()
         {
             // ----- Procesar opciones y Menu
             int Opcion;
             do
             {
+                Console.Clear();
                 Menu();
                 // ----- Leer Opcion 
                 Console.Write("Ingresa Opcion: ");
@@ -70,9 +74,18 @@ namespace AppBiblioteca
                     case 4:
                         ListaTesis.BuscarTesis();
                         break;
+                    case 5:
+                        ListaTesis.ListarTesisAreaAnioAdelante();
+                        break;
+                    case 6:
+                        ListaTesis.ListaTesisAsesorEspecifico();
+                        break;
+                    case 7:
+                        ListaTesis.Listar3DocentesMayoresTesisAsesoradas();
+                        break;
 
                 } // -- fin de switch 
-            } while (Opcion < 5);
+            } while (Opcion < 8);
         }
         #endregion ===================    OTROS     =======================
 
