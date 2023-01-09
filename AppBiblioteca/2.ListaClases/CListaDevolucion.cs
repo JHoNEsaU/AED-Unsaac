@@ -26,12 +26,12 @@ namespace AppBiblioteca
             CDevolucion devolucion = new CDevolucion();
             devolucion.Leer();
             // ----- Agregar objeto a la Lista de Libros
-            if(CControlGeneral.controlPrestamo.ListaLector.BuscarPrestamoID(devolucion.IdPrestamo) != null)
+            if(CControlGeneral.controlPrestamo.ListaPrestamo.BuscarPrestamoID(devolucion.IdPrestamo) != null)
             {
                 Agregar(devolucion);
 
                 // ----- Eliminar Prestamo
-                CControlGeneral.controlPrestamo.ListaLector.Listado.Eliminar(CControlGeneral.controlPrestamo.ListaLector.BuscarPrestamoID(devolucion.IdPrestamo));
+                CControlGeneral.controlPrestamo.ListaPrestamo.Listado.Eliminar(CControlGeneral.controlPrestamo.ListaPrestamo.BuscarPrestamoID(devolucion.IdPrestamo));
             }
             else
             {

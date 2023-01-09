@@ -20,7 +20,7 @@ namespace AppBiblioteca
         #endregion ==================== CONSTRUCTORES =======================
 
         #region ==================== PROPIEDADES =======================
-        public CListaTesis ListaLector
+        public CListaTesis ListaTesis
         {
             get { return aListaTesis; }
             set { aListaTesis = value; }
@@ -59,16 +59,16 @@ namespace AppBiblioteca
                 switch (Opcion)
                 {
                     case 1:
-                        ListaLector.AgregarTesis();
+                        ListaTesis.AgregarTesis();
                         break;
                     case 2:
-                        ListaLector.EliminarTesis();
+                        ListaTesis.EliminarTesis();
                         break;
                     case 3:
-                        ListaLector.ListarTesis();
+                        ListaTesis.ListarTesis();
                         break;
                     case 4:
-                        ListaLector.BuscarTesis();
+                        ListaTesis.BuscarTesis();
                         break;
 
                 } // -- fin de switch 

@@ -20,7 +20,7 @@ namespace AppBiblioteca
         #endregion ==================== CONSTRUCTORES =======================
 
         #region ==================== PROPIEDADES =======================
-        public CListaDevolucion ListaLector
+        public CListaDevolucion ListaDevolucion
         {
             get { return aListaDevolucion; }
             set { aListaDevolucion = value; }
@@ -60,19 +60,19 @@ namespace AppBiblioteca
                 switch (Opcion)
                 {
                     case 1:
-                        ListaLector.AgregarDevolucion();
+                        ListaDevolucion.AgregarDevolucion();
                         break;
                     case 2:
-                        ListaLector.EliminarDevolucion();
+                        ListaDevolucion.EliminarDevolucion();
                         break;
                     case 3:
-                        ListaLector.ListarDevoluciones();
+                        ListaDevolucion.ListarDevoluciones();
                         break;
                     case 4:
-                        ListaLector.BuscarDevolucion();
+                        ListaDevolucion.BuscarDevolucion();
                         break;
                     case 5:
-                        CControlGeneral.controlPrestamo.ListaLector.ListarPrestamo();
+                        CControlGeneral.controlPrestamo.ListaPrestamo.ListarPrestamo();
                         break;
 
 

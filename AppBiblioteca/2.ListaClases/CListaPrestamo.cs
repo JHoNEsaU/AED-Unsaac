@@ -26,13 +26,13 @@ namespace AppBiblioteca
             // ----- Crear objeto Libro y leer sus datos 
             CPrestamo prestamo = new CPrestamo();
             prestamo.Leer();
-            if (CControlGeneral.controlDevolucion.ListaLector.BuscarDevolucionID(prestamo.Id) == null)
+            if (CControlGeneral.controlDevolucion.ListaDevolucion.BuscarDevolucionID(prestamo.Id) == null)
             {
                 // ----- Agregar objeto a la Lista de Libros
                 Agregar(prestamo);
 
                 // ----- Eliminar Prestamo
-                CControlGeneral.controlDevolucion.ListaLector.Listado.Eliminar(CControlGeneral.controlDevolucion.ListaLector.BuscarDevolucionID(prestamo.Id));
+                CControlGeneral.controlDevolucion.ListaDevolucion.Listado.Eliminar(CControlGeneral.controlDevolucion.ListaDevolucion.BuscarDevolucionID(prestamo.Id));
             }
             else
             {
