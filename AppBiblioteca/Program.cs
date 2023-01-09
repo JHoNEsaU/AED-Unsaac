@@ -14,7 +14,6 @@ namespace AppBiblioteca
             CControlGeneral controlGeneral = new CControlGeneral();
             controlGeneral.EJECUTARPRINCIPAL();
 
-
         }
     }
 }

@@ -28,7 +28,23 @@ namespace AppBiblioteca
             Console.WriteLine("4.- Operacion Devoluciones");
             Console.WriteLine("5.- Salir");
         }
-       
+
+        static public int leerOpcion()
+        {
+            int opcion = 0;
+            try
+            {
+                opcion = int.Parse(Console.ReadLine());
+            }
+            catch (Exception e)
+            {
+                Console.Write("Introducir input correctamente : " );
+                leerOpcion();
+                Console.Clear();
+            }
+            return opcion;
+        }
+
         public void EJECUTARPRINCIPAL()
         {
             // ----- Procesar opciones y Menu

@@ -26,17 +26,49 @@ namespace AppBiblioteca
             // ----- Crear objeto Libro y leer sus datos 
             CPrestamo prestamo = new CPrestamo();
             prestamo.Leer();
+
             if (CControlGeneral.controlDevolucion.ListaDevolucion.BuscarDevolucionID(prestamo.Id) == null)
             {
+                CTesis Aux = new CTesis();
+                CLector AuxL = new CLector();
+                AuxL.Id = prestamo.IdLector;
+                Aux.Id = prestamo.IdLibro;
+                int I = CControlGeneral.controlTesis.ListaTesis.Indice(Aux);
+                int I2 = CControlGeneral.controlLector.ListaLector.Indice(AuxL);
+                if (I == 0 && I2 == 0)
+                {
+                    Console.WriteLine("Datos Incorrectos ");
+                }                else
+                {
+                    Agregar(prestamo);
+                    Console.WriteLine("Elemento agregado correctamente");
+                }
                 // ----- Agregar objeto a la Lista de Libros
-                Agregar(prestamo);
-
+                
                 // ----- Eliminar Prestamo
-                CControlGeneral.controlDevolucion.ListaDevolucion.Listado.Eliminar(CControlGeneral.controlDevolucion.ListaDevolucion.BuscarDevolucionID(prestamo.Id));
+               
             }
             else
             {
-                Console.WriteLine("Devolucion no encontrada");
+                CTesis Aux = new CTesis();
+                CLector AuxL = new CLector();
+                AuxL.Id = prestamo.IdLector;
+                Aux.Id = prestamo.IdLibro;
+                int I = CControlGeneral.controlTesis.ListaTesis.Indice(Aux);
+                int I2 = CControlGeneral.controlLector.ListaLector.Indice(AuxL);
+                if (I == 0 && I2 == 0) 
+                {
+                    Console.WriteLine("Datos Incorrectos ");         
+                }                else
+                {
+                    Agregar(prestamo);
+                    CControlGeneral.controlDevolucion.ListaDevolucion.Listado.Eliminar(CControlGeneral.controlDevolucion.ListaDevolucion.BuscarDevolucionID(prestamo.Id));
+                    
+                }
+                // ----- Agregar objeto a la Lista de Libros
+
+                // ----- Eliminar Prestamo
+                
             }
             
         }
@@ -46,7 +78,7 @@ namespace AppBiblioteca
 
             // ----- Determinar Indice o ubicacion del libro
             int I = Indice(ID);
-            if (I >= 0)
+            if (I > 0)
             {
                 CPrestamo OLibro = (Listado.Iesimo(I) as CPrestamo);
                 return OLibro;
@@ -65,10 +97,10 @@ namespace AppBiblioteca
             string Id = Console.ReadLine();
             // ----- Determinar Indice o ubicacion del libro
             int I = Indice(Id);
-            if (I >= 0)
+            if (I > 0)
             {
                 CPrestamo OLibro = (Listado.Iesimo(I) as CPrestamo);
-                OLibro.Mostrar();
+                OLibro.Escribir();
             }
             else
                 // ----- Objeto no existe en el listado, por tanto poner mensaje de error 
@@ -83,9 +115,10 @@ namespace AppBiblioteca
             string Id = Console.ReadLine();
             // ----- Determinar Indice o ubicacion del libro
             int I = Indice(Id);
-            if (I >= 0)
+            if (I > 0)
             {
                 Listado.Eliminar(I);
+                Console.Write("Se elimino correctamente el Elemento ");
             }
             else
                 // ----- Objeto no existe en el listado, por tanto poner mensaje de error 

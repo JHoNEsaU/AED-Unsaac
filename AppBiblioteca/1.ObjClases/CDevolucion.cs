@@ -44,7 +44,7 @@ namespace AppBiblioteca
         #endregion
         public override void Leer()
         {
-            Console.WriteLine(" ============ INTRODUCIR DATOS DE DEVOLUCION ============");
+            Console.WriteLine(" ========================================= INTRODUCIR DATOS DE DEVOLUCION =========================================");
             Console.WriteLine("Introducir ID de devolucion: ");
             Id = Console.ReadLine();
             Console.WriteLine("Introducir fecha de devolucion: ");

@@ -29,9 +29,8 @@ namespace AppBiblioteca
             if(CControlGeneral.controlPrestamo.ListaPrestamo.BuscarPrestamoID(devolucion.IdPrestamo) != null)
             {
                 Agregar(devolucion);
-
-                // ----- Eliminar Prestamo
                 CControlGeneral.controlPrestamo.ListaPrestamo.Listado.Eliminar(CControlGeneral.controlPrestamo.ListaPrestamo.BuscarPrestamoID(devolucion.IdPrestamo));
+                Console.Write("Se agrego correctamente el Elemento");
             }
             else
             {
@@ -47,7 +46,7 @@ namespace AppBiblioteca
 
             // ----- Determinar Indice o ubicacion del libro
             int I = Indice(ID);
-            if (I >= 0)
+            if (I > 0)
             {
                 CDevolucion OLibro = (Listado.Iesimo(I) as CDevolucion);
                 return OLibro;
@@ -64,10 +63,10 @@ namespace AppBiblioteca
             string Id = Console.ReadLine();
             // ----- Determinar Indice o ubicacion del libro
             int I = Indice(Id);
-            if (I >= 0)
+            if (I > 0)
             {
                 CDevolucion OLibro = (Listado.Iesimo(I) as CDevolucion);
-                OLibro.Mostrar();
+                OLibro.Escribir();
             }
             else
                 // ----- Objeto no existe en el listado, por tanto poner mensaje de error 
@@ -81,9 +80,10 @@ namespace AppBiblioteca
             string Id = Console.ReadLine();
             // ----- Determinar Indice o ubicacion del libro
             int I = Indice(Id);
-            if (I >= 0)
+            if (I > 0)
             {
                 Listado.Eliminar(I);
+                Console.Write("Se elimino correctamente el Elemento ");
             }
             else
                 // ----- Objeto no existe en el listado, por tanto poner mensaje de error 

@@ -9,7 +9,12 @@ namespace AppBiblioteca
     {
         public static void EJECUTARDATOS()
         {
+
+            DatosLector();
             DatosTesis();
+            DatosPrestamo();
+            DatosDevolucion();
+
         }
         // ==============================================================================================================================
         public static void DatosLector()
@@ -188,7 +193,7 @@ namespace AppBiblioteca
 
         }
         // ==============================================================================================================================
-        public void DatosDevolucion()
+        public static void DatosDevolucion()
         {
 
             CControlGeneral.controlDevolucion.ListaDevolucion.Agregar(new CDevolucion("D10001", "01/05/2020", "P10001"));

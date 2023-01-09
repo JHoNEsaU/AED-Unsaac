@@ -24,8 +24,19 @@ namespace AppBiblioteca
             // ----- Crear objeto Libro y leer sus datos 
             CLector lector = new CLector();
             lector.Leer();
-            // ----- Agregar objeto a la Lista de Libros
-            Agregar(lector);
+            int I = Indice(lector);
+            if(I == 0)
+            {
+                // ----- Agregar objeto a la Lista de Lectores
+                Agregar(lector);
+                Console.WriteLine("Se agrego correctamente el Elemento");
+            }
+            else
+            {
+                Console.WriteLine("Ya existe elemento");
+            }
+            
+           
         }
 
         // ==============================================================
@@ -37,10 +48,10 @@ namespace AppBiblioteca
             string Id = Console.ReadLine();
             // ----- Determinar Indice o ubicacion del libro
             int I = Indice(Id);
-            if (I >= 0)
+            if (I > 0)
             {
                 CLector OLibro = (Listado.Iesimo(I) as CLector);
-                OLibro.Mostrar();
+                OLibro.Escribir();
             }
             else
                 // ----- Objeto no existe en el listado, por tanto poner mensaje de error 
@@ -54,13 +65,14 @@ namespace AppBiblioteca
             string Id = Console.ReadLine();
             // ----- Determinar Indice o ubicacion del libro
             int I = Indice(Id);
-            if (I >= 0)
+            if (I > 0)
             {
                 Listado.Eliminar(I);
+                Console.Write("Se elimino correctamente el Elemento ");
             }
             else
                 // ----- Objeto no existe en el listado, por tanto poner mensaje de error 
-                Console.WriteLine(Id + " No existe en la lista...");
+                Console.WriteLine(Id + " No existe en la lista ");
         }
         // ======================================================
         public void SeleccionarLibros()

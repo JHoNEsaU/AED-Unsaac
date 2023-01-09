@@ -24,8 +24,19 @@ namespace AppBiblioteca
             // ----- Crear objeto Libro y leer sus datos 
             CTesis tesis = new CTesis();
             tesis.Leer();
-            // ----- Agregar objeto a la Lista de Libros
-            Agregar(tesis);
+            int I = Indice(tesis.Id);
+            if(I == 0)
+            {
+                // ----- Agregar objeto a la Lista de Tesis
+                Agregar(tesis);
+                Console.WriteLine("Se agrego correctamente el elemento");
+            }
+            else
+            {
+                Console.WriteLine("Ya existe elemento");
+            }
+            
+            
         }
 
         // ==============================================================
@@ -37,10 +48,10 @@ namespace AppBiblioteca
             string Id = Console.ReadLine();
             // ----- Determinar Indice o ubicacion del libro
             int I = Indice(Id);
-            if (I >= 0)
+            if (I > 0)
             {
                 CTesis OLibro = (Listado.Iesimo(I) as CTesis);
-                OLibro.Mostrar();
+                OLibro.Escribir();
             }
             else
                 // ----- Objeto no existe en el listado, por tanto poner mensaje de error 
@@ -55,9 +66,10 @@ namespace AppBiblioteca
             string Id = Console.ReadLine();
             // ----- Determinar Indice o ubicacion del libro
             int I = Indice(Id);
-            if (I >= 0)
+            if (I > 0)
             {
                 Listado.Eliminar(I);
+                Console.Write("Se elimino correctamente el Elemento ");
             }
             else
                 // ----- Objeto no existe en el listado, por tanto poner mensaje de error 
