@@ -14,12 +14,58 @@ namespace AppBiblioteca
         // ==============================================================================================================================
         public static void DatosLector()
         {
-            CControlGeneral.controlLector.ListaLector.Agregar(new CLector());
+            CControlGeneral.controlLector.ListaLector.Agregar(new CLector("210940", "Jhon Esau ", " Pumachoque Choquenaira", "Tinta", "M", "24"));
+            CControlGeneral.controlLector.ListaLector.Agregar(new CLector("210941", "David ", "Huacho Cruz", "Apv Campiña alta", "M", "20"));
+            CControlGeneral.controlLector.ListaLector.Agregar(new CLector("210233", "Andric Jeremy ", "Bueno Lescano", "Jose olaya", "M", "23"));
+            CControlGeneral.controlLector.ListaLector.Agregar(new CLector("210112", "Joseph Timothy", " Calderon Garcia", "C. Angamos", "M", "16"));
+            CControlGeneral.controlLector.ListaLector.Agregar(new CLector("210631", "Flor de Liz", " Ccasa Ccahuana", "Intiraymi", "F", "20"));
+            CControlGeneral.controlLector.ListaLector.Agregar(new CLector("210665", "Brandon Ccoyo ", "Mejia", "C. Union", "M", "21"));
+            CControlGeneral.controlLector.ListaLector.Agregar(new CLector("210923", "Emerson Cordova ", "Ccopa", "AV. Garcilaso", "M", "19"));
+            CControlGeneral.controlLector.ListaLector.Agregar(new CLector("210220", "Ibeth Janela", "Felipe Sicus", "AV las mercedes", "F", "18"));
         }
         // ==============================================================================================================================
         public static void DatosPrestamo()
         {
-          
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10035", "12/2/2020", "1/4/2020", "210940", "T10001"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10037", "21/4/2021", "1/5/2021", "210112", "T10002"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10038", "3/6/2021", "2/7/2021", "210941", "T10002"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10039", "5/8/2022", "3/9/2022", "210631", "T10016"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10040", "11/5/2021", "4/8/2021", "210220", "T10012"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10041", "12/3/2022", "5/12/2022", "210220", "T10004"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10042", "23/8/2021", "6/9/2021", "210631", "T10002"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10043", "14/12/2022", "21/12/2022", "210665", "T10014"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10044", "12/3/2020", "3/4/2020", "210112", "T10009"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10045", "12/6/2021", "4/7/2021", "210631", "T10016"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10046", "12/9/2020", "12/11/2020", "210233", "T10007"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10047", "12/7/2020", "21/8/2020", "210940", "T10002"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10048", "12/4/2020", "13/4/2020", "210220", "T10015"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10049", "12/9/2020", "19/10/2020", "210941", "T10004"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10050", "12/7/2022", "25/11/2022", "210923", "T10014"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10051", "12/5/2021", "26/7/2021", "210112", "T10003"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10052", "12/1/2020", "30/4/2020", "210233", "T10011"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10053", "12/4/2021", "21/8/2021", "210940", "T10012"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10054", "12/5/2022", "23/9/2022", "210941", "T10013"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10055", "12/7/2020", "12/10/2020", "210220", "T10002"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10056", "12/8/2021", "19/11/2021", "210112", "T10009"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10057", "12/9/2022", "32/12/2022", "210665", "T10015"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10058", "12/4/2020", "12/9/2020", "210941", "T10005"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10059", "12/3/2022", "31/5/2022", "210923", "T10008"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10060", "12/3/2020", "11/8/2020", "210941", "T10002"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10061", "12/5/2021", "2/7/2021", "210112", "T10006"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10062", "12/7/2020", "4/8/2020", "210233", "T10007"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10063", "12/8/2022", "9/12/2022", "210940", "T10012"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10064", "12/5/2020", "19/7/2020", "210923", "T10005"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10065", "12/3/2021", "12/4/2021", "210941", "T10010"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10066", "12/11/2022", "14/8/2022", "210631", "T10002"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10067", "12/12/2022", "30/12/2022", "210220", "T10013"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10068", "12/10/2022", "13/12/2022", "210631", "T10008"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10069", "12/10/2021", "23/11/2021", "210941", "T10005"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10070", "12/1/2021", "21/4/2021", "210233", "T10015"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10071", "12/3/2022", "15/7/2022", "210923", "T10008"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10072", "12/6/2021", "18/9/2021", "210112", "T10002"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10073", "12/5/2021", "13/6/2021", "210220", "T10013"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10074", "12/4/2022", "12/9/2022", "210233", "T10006"));
+            CControlGeneral.controlPrestamo.ListaPrestamo.Agregar(new CPrestamo("P10075", "12/3/2020", "14/7/2020", "210112", "T10016"));
         }
         // ==============================================================================================================================
         public static void DatosTesis()
